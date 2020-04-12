@@ -26,7 +26,10 @@
   "default_currency",
   "section_break_15",
   "company_header",
-  "company_footer"
+  "company_footer",
+  "column_break_24",
+  "company_headerwith_arabic",
+  "company_footerwith_arabic"
  ],
  "fields": [
   {
@@ -155,10 +158,24 @@
    "fieldname": "manual_generate_sales_invoice",
    "fieldtype": "Button",
    "label": "Manual Generate Sales Invoice"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_headerwith_arabic",
+   "fieldtype": "Text",
+   "label": "Company Header(with Arabic)"
+  },
+  {
+   "fieldname": "company_footerwith_arabic",
+   "fieldtype": "Text",
+   "label": "Company Footer(with Arabic)"
   }
  ],
  "issingle": 1,
- "modified": "2020-03-16 09:39:50.283654",
+ "modified": "2020-04-09 06:43:37.041674",
  "modified_by": "Administrator",
  "module": "TailPOS Sync",
  "name": "Tail Settings",

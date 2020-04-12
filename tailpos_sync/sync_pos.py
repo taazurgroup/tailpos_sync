@@ -68,7 +68,7 @@ def sync_data(data):
         return {"status": False}
 
 def get_device(device_id):
-    payment_types = ""
+    payment_types = []
 
     if device_id:
         print(device_id)
@@ -77,22 +77,28 @@ def get_device(device_id):
 
             if device_record:
                 for idx,i in enumerate(device_record.mop):
-                    payment_types += i.__dict__['payment_type']
-                    if idx != len(device_record.mop) - 1:
-                        payment_types += ","
+                    payment_type = i.__dict__
+                    payment_types.append({
+                        "mop": payment_type['payment_type'],
+                        "mop_arabic": payment_type['arabic_translation'],
+                    })
         except:
             tailpos_settings_payment = frappe.get_single("Tail Settings")
             for idx, i in enumerate(tailpos_settings_payment.mop):
-                payment_types += i.__dict__['payment_type']
-                if idx != len(tailpos_settings_payment.mop) - 1:
-                    payment_types += ","
+                payment_type = i.__dict__
+                payment_types.append({
+                    "mop": payment_type['payment_type'],
+                    "mop_arabic": payment_type['arabic_translation'],
+                })
             frappe.log_error(frappe.get_traceback())
     else:
         tailpos_settings_payment = frappe.get_single("Tail Settings")
         for idx, i in enumerate(tailpos_settings_payment.mop):
-            payment_types += i.__dict__['payment_type']
-            if idx != len(tailpos_settings_payment.mop) - 1:
-                payment_types += ","
+            payment_type = i.__dict__
+            payment_types.append({
+                "mop": payment_type['payment_type'],
+                "mop_arabic": payment_type['arabic_translation'],
+            })
 
     return {"tableNames": "Device", "paymentTypes": payment_types}
 def check_modified(data, frappe_table):

@@ -43,6 +43,7 @@ fixtures = [
                     "Error Log-device_id",
                     "Error Log-wallet_card",
                     "Error Log-pin",
+                    "Item-arabic_text",
                     "Sales Invoice-receipt"
                 ]
             ]
