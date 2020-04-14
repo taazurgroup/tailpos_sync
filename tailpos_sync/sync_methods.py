@@ -26,6 +26,7 @@ def get_item_query(pos_profile,device):
         'tabItem.stock_uom',
         'tabItem.item_name',
         'tabItem.color_or_image',
+        'tabItem.arabic_text',
         '`tabItem Tax`.item_tax_template'
     ]
 
@@ -142,6 +143,7 @@ def insert_data(data, frappe_table, receipt_total):
             frappe_table.db_set(field_name, value)
         except:
             None
+
     try:
         if db_name == "Receipts":
             try:
