@@ -69,12 +69,10 @@ def sync_data(data):
 
 def get_device(device_id):
     payment_types = []
-
     if device_id:
         print(device_id)
         try:
             device_record = frappe.get_doc("Device", device_id)
-
             if device_record:
                 for idx,i in enumerate(device_record.mop):
                     payment_type = i.__dict__

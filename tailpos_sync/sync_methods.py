@@ -439,12 +439,14 @@ def update_sync_data(data, table):
 def get_default_company(device):
     default_company = frappe.get_single('Tail Settings')
     default_company_from_device = frappe.db.get_value('Device', device, 'company')
+    device_record = frappe.get_doc("Device", device)
     if default_company_from_device:
         default_company.company_name = default_company_from_device
     res = []
     res.append({
         'tableNames': "Company",
-        'syncObject': default_company
+        'syncObject': default_company,
+        'device': device_record
     })
     return res
 

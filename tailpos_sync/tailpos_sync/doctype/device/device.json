@@ -13,7 +13,13 @@
   "mode_of_payment_section",
   "cash_mop",
   "card_mop",
-  "mop"
+  "mop",
+  "header_and_footer_section",
+  "header",
+  "footer",
+  "column_break_14",
+  "header_translation",
+  "footer_translation"
  ],
  "fields": [
   {
@@ -74,9 +80,39 @@
    "fieldtype": "Table",
    "label": "Device Categories",
    "options": "Device Category"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "header_and_footer_section",
+   "fieldtype": "Section Break",
+   "label": "Header and Footer"
+  },
+  {
+   "fieldname": "header",
+   "fieldtype": "Small Text",
+   "label": "Header"
+  },
+  {
+   "fieldname": "header_translation",
+   "fieldtype": "Small Text",
+   "label": "Header Translation"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "footer",
+   "fieldtype": "Small Text",
+   "label": "Footer"
+  },
+  {
+   "fieldname": "footer_translation",
+   "fieldtype": "Small Text",
+   "label": "Footer Translation"
   }
  ],
- "modified": "2020-03-17 08:28:43.833568",
+ "modified": "2020-04-16 16:05:23.554003",
  "modified_by": "Administrator",
  "module": "TailPOS Sync",
  "name": "Device",
