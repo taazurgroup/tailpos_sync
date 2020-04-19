@@ -1,6 +1,6 @@
 
 git reset --hard
-git pull
+git pull https://github.com/taazurlimited/tailpos_sync.git
 cd ../..
 bench --site $1 migrate
 
