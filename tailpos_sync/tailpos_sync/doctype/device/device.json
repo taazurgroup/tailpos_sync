@@ -6,7 +6,10 @@
  "field_order": [
   "device_name",
   "pos_profile",
+  "section_break_3",
   "company",
+  "column_break_5",
+  "company_translation",
   "item_group_device",
   "device_item_group",
   "device_categories",
@@ -110,9 +113,22 @@
    "fieldname": "footer_translation",
    "fieldtype": "Small Text",
    "label": "Footer Translation"
+  },
+  {
+   "fieldname": "company_translation",
+   "fieldtype": "Data",
+   "label": "Company Translation"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
   }
  ],
- "modified": "2020-04-16 16:05:23.554003",
+ "modified": "2020-04-19 08:51:16.360143",
  "modified_by": "Administrator",
  "module": "TailPOS Sync",
  "name": "Device",
