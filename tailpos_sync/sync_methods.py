@@ -199,12 +199,13 @@ def sync_from_erpnext(device=None, force_sync=True):
         if table == "Item":
             for i in query_data:
                 if 'item_tax_template' in i:
-                    item_tax_details = frappe.db.sql(""" SELECT tax_type, tax_rate FROM `tabItem Tax Template Detail` WHERE parent=%s""", i.item_tax_template ,as_dict=True)
+                    item_tax_details = frappe.db.sql(""" SELECT tax_type, tax_rate,tax_translation FROM `tabItem Tax Template Detail` WHERE parent=%s""", i.item_tax_template ,as_dict=True)
                     item_tax_details_split = []
                     for iii in item_tax_details:
                         item_tax_details_split.append({
                             "tax_type": iii.tax_type.split("-")[0],
-                            "tax_rate": iii.tax_rate
+                            "tax_rate": iii.tax_rate,
+                            "tax_translation": iii.tax_translation
                         })
                     i.item_tax_template_detail = item_tax_details_split
 

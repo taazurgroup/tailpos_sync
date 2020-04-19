@@ -44,7 +44,8 @@ fixtures = [
                     "Error Log-wallet_card",
                     "Error Log-pin",
                     "Item-arabic_text",
-                    "Sales Invoice-receipt"
+                    "Sales Invoice-receipt",
+                    "Item Tax Template Detail-tax_translation"
                 ]
             ]
         ]
