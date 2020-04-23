@@ -9,7 +9,7 @@ def execute(filters=None):
 
 	from_date = filters.get("from_date")
 	to_date = filters.get("to_date")
-	cost_center = filters.get("cost_center")
+	pos_profile = filters.get("pos_profile")
 
 	if from_date > to_date:
 		frappe.throw("From Date should be before To Date")
@@ -21,7 +21,7 @@ def execute(filters=None):
 		columns.append({"fieldname": "gross_sale", "label": "Gross Sale", "fieldtype": "Data", "width": 100})
 
 		query = """ SELECT * FROM `tabSales Invoice` 
-				WHERE docstatus=1 and posting_date BETWEEN '{0}' and '{1}' and cost_center = '{2}'""".format(from_date, to_date,cost_center)
+				WHERE docstatus=1 and posting_date BETWEEN '{0}' and '{1}' and pos_profile = '{2}'""".format(from_date, to_date,pos_profile)
 		print(query)
 		sales_invoices = frappe.db.sql(query, as_dict=True)
 
