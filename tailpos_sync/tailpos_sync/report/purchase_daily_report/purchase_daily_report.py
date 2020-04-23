@@ -26,11 +26,10 @@ def execute(filters=None):
 	conditions = ""
 	print(cost_center)
 	if cost_center:
-		print("COST CENTER")
 		conditions += " and cost_center = '{0}'".format(cost_center)
 	if accounts_ledger:
 		conditions += " and credit_to = '{0}'".format(accounts_ledger)
-	query = """ SELECT * FROM `tabPurchase Invoice` WHERE posting_date BETWEEN '{0}' and '{1}' {2}""".format(from_date, to_date, conditions)
+	query = """ SELECT * FROM `tabPurchase Invoice` WHERE docstatus=1 and posting_date BETWEEN '{0}' and '{1}' {2}""".format(from_date, to_date, conditions)
 	print(query)
 	purchase_invoice = frappe.db.sql(query, as_dict=True)
 	for i in purchase_invoice:
