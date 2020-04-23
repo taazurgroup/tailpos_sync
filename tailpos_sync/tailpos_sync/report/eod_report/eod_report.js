@@ -18,7 +18,7 @@ frappe.query_reports["EOD Report"] = {
 			"reqd": 1
 		},
 		{
-			"fieldname": "cost_cener",
+			"fieldname": "cost_center",
 			"label": __("Cost Center"),
 			"fieldtype": "Link",
 			"options": "Cost Center",

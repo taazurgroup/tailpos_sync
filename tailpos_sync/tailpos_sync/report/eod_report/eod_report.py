@@ -17,7 +17,10 @@ def execute(filters=None):
 	to_date = filters.get("to_date")
 	cost_center = filters.get("cost_center")
 
-	sales_invoices = frappe.db.sql(""" SELECT * FROM `tabSales Invoice` WHERE posting_date BETWEEN %s and %s and cost_center=%s""", (from_date, to_date,cost_center), as_dict=True)
+	query = """ SELECT * FROM `tabSales Invoice` 
+ 			WHERE docstatus=1 and posting_date BETWEEN '{0}' and '{1}' and cost_center = '{2}'""".format(from_date, to_date,cost_center)
+	print(query)
+	sales_invoices = frappe.db.sql(query, as_dict=True)
 
 	for i in sales_invoices:
 		obj = {
