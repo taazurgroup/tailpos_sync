@@ -46,3 +46,5 @@ def before_submit(doc, method):
 def after_submit(doc, method):
     if doc.receipt:
         doc.posting_date = doc.due_date
+        doc.outstanding_amount = 0
+
