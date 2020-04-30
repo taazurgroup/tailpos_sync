@@ -14,8 +14,10 @@ def execute(filters=None):
 	if from_date > to_date:
 		frappe.throw("From Date should be before To Date")
 	else:
+		columns.append({"fieldname": "posting_time", "label": "Posting Time", "fieldtype": "Data", "width": 150})
 		columns.append({"fieldname": "store_name", "label": "Store Name", "fieldtype": "Data", "width": 150})
 		columns.append({"fieldname": "discount", "label": "Discount", "fieldtype": "Data", "width": 100})
+		columns.append({"fieldname": "write_off", "label": "Write Off", "fieldtype": "Data", "width": 100})
 		columns.append({"fieldname": "net_sale", "label": "Net Sale", "fieldtype": "Data", "width": 100})
 		columns.append({"fieldname": "vat", "label": "VAT", "fieldtype": "Data", "width": 100})
 		columns.append({"fieldname": "gross_sale", "label": "Gross Sale", "fieldtype": "Data", "width": 100})
@@ -27,8 +29,10 @@ def execute(filters=None):
 
 		for i in sales_invoices:
 			obj = {
+				"posting_time": i.posting_time,
 				"store_name": i.pos_profile,
 				"discount": i.discount_amount,
+				"write_off": i.write_off_amount,
 				"net_sale": i.total,
 				"gross_sale": i.grand_total,
 				"vat": i.total_taxes_and_charges,

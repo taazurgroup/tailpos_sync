@@ -40,7 +40,8 @@
    "options": "POS Profile"
   },
   {
-   "description": "The TailPOS by default have Cash/Card as payment type. Link the mode of payment for your generated sales invoice accounting details.",
+   "collapsible": 1,
+   "description": "Link the mode of payment for your generated sales invoice accounting details.",
    "fieldname": "mode_of_payment_section",
    "fieldtype": "Section Break",
    "label": "Mode of Payment"
@@ -48,12 +49,14 @@
   {
    "fieldname": "cash_mop",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Cash",
    "options": "Mode of Payment"
   },
   {
    "fieldname": "card_mop",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Card",
    "options": "Mode of Payment"
   },
@@ -128,7 +131,7 @@
    "fieldtype": "Column Break"
   }
  ],
- "modified": "2020-04-19 08:51:16.360143",
+ "modified": "2020-04-24 20:44:44.640304",
  "modified_by": "Administrator",
  "module": "TailPOS Sync",
  "name": "Device",

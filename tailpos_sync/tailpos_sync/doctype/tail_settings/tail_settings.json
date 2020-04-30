@@ -86,7 +86,8 @@
    "label": "Use Device Profile"
   },
   {
-   "description": "The current TailPOS uses two mode of payments: (1) Cash, and (2) Card. Depending on the mode of payment from the Payments, generated sales invoice follows the mode of payment to use.",
+   "collapsible": 1,
+   "description": "Depending on the mode of payment from the Payments, generated sales invoice follows the mode of payment to use.",
    "fieldname": "mode_of_payment_section",
    "fieldtype": "Section Break",
    "label": "Mode of Payment"
@@ -94,12 +95,14 @@
   {
    "fieldname": "cash_mop",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Cash",
    "options": "Mode of Payment"
   },
   {
    "fieldname": "card_mop",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Card",
    "options": "Mode of Payment"
   },
@@ -130,8 +133,10 @@
    "options": "Currency"
   },
   {
+   "collapsible": 1,
    "fieldname": "section_break_15",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Header and Footers"
   },
   {
    "fieldname": "company_header",
@@ -175,7 +180,7 @@
   }
  ],
  "issingle": 1,
- "modified": "2020-04-09 06:43:37.041674",
+ "modified": "2020-04-24 20:46:38.999719",
  "modified_by": "Administrator",
  "module": "TailPOS Sync",
  "name": "Tail Settings",
