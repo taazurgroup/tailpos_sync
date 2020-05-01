@@ -21,8 +21,9 @@ class Payments(Document):
 		self.compute_receipt_total()
 
 	def compute_receipt_total(self):
-		receipt = frappe.db.sql(""" SELECT total_amount FROM tabReceipts WHERE name=%s """, self.receipt, as_dict=True)
+		receipt = frappe.db.sql(""" SELECT total_amount, deviceid FROM tabReceipts WHERE name=%s """, self.receipt, as_dict=True)
 		change = self.paid - receipt[0].total_amount
+		self.deviceid = receipt[0].deviceid
 		self.change = change
 		for i in self.payment_types:
 			if i.type == "Cash":
