@@ -26,6 +26,6 @@ class Payments(Document):
 		self.deviceid = receipt[0].deviceid
 		self.change = change
 		for i in self.payment_types:
-			if i.type == "Cash":
+			if "*" in i.type:
 				i.amount = i.amount - change
 
