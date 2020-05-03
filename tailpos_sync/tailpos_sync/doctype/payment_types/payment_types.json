@@ -20,11 +20,12 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Amount",
+   "precision": "2",
    "read_only": 1
   }
  ],
  "istable": 1,
- "modified": "2020-05-01 08:16:27.099794",
+ "modified": "2020-05-03 10:19:20.738384",
  "modified_by": "Administrator",
  "module": "TailPOS Sync",
  "name": "Payment Types",

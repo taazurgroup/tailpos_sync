@@ -27,5 +27,5 @@ class Payments(Document):
 		self.change = change
 		for i in self.payment_types:
 			if "*" in i.type:
-				i.amount = i.amount - change
+				i.amount = round(i.amount - change,2)
 

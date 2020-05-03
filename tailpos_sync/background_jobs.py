@@ -112,7 +112,9 @@ def get_debit_to(company):
 def _insert_invoice(invoice, mop, taxes_total,receipt, submit=False, allow_negative_stock=False):
     invoice.insert()
     total_paid = 0
+    print("mop")
     if len(mop) > 0:
+        print(mop)
         for x in mop:
             invoice.append('payments', {
                 'mode_of_payment': x['mode_of_payment'],
@@ -154,7 +156,9 @@ def _insert_invoice(invoice, mop, taxes_total,receipt, submit=False, allow_negat
         invoice.additional_discount_percentage = float(receipt.discountvalue) if receipt.discounttype == "Percentage" else 0
         invoice.discount_amount = float(receipt.discount_amount)
 
+
     from frappe.utils import money_in_words
+
     invoice.in_words = money_in_words(round(float(invoice.grand_total),2), invoice.currency)
     invoice.save()
     frappe.db.set_value("Sales Invoice", invoice.name, "tax_category", "")
@@ -165,6 +169,11 @@ def _insert_invoice(invoice, mop, taxes_total,receipt, submit=False, allow_negat
     invoice.reload()
     if submit and not check_stock_qty:
         invoice.submit()
+        if invoice.loyalty_program:
+            if invoice.loyalty_amount > 0:
+                grand_total = invoice.grand_total - invoice.loyalty_amount
+                frappe.db.set_value("Sales Invoice", invoice.name, "grand_total", grand_total)
+
         frappe.db.set_value("Sales Invoice", invoice.name, "status", "Paid")
         frappe.db.set_value("Sales Invoice", invoice.name, "outstanding_amount", 0)
         frappe.db.commit()

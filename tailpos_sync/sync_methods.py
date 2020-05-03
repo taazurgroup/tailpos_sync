@@ -346,7 +346,7 @@ def get_payment_types(payment):
     for type in payment_types:
         _payment_types.append({
             "type": type['type'],
-            "amount": type['amount'],
+            "amount": float(round(type['amount'],2)),
         })
     return _payment_types
 
