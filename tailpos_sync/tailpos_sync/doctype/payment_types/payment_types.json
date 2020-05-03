@@ -12,17 +12,19 @@
    "fieldname": "type",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Type"
+   "label": "Type",
+   "read_only": 1
   },
   {
    "fieldname": "amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Amount"
+   "label": "Amount",
+   "read_only": 1
   }
  ],
  "istable": 1,
- "modified": "2020-04-01 10:40:54.025518",
+ "modified": "2020-05-01 08:16:27.099794",
  "modified_by": "Administrator",
  "module": "TailPOS Sync",
  "name": "Payment Types",

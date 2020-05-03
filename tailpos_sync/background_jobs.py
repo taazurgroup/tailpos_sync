@@ -27,7 +27,7 @@ def generate_si_from_receipts():
     receipts = frappe.db.sql("""
         SELECT * FROM `tabReceipts`
         WHERE generated = 0
-        LIMIT %(limit)s
+        ORDER BY loyalty_type ASC LIMIT %(limit)s 
     """, {'limit': int(generate_limit)}, as_dict=True)
     # receipts = frappe.get_all('Receipts', filters={'generated': 0})
 
@@ -44,7 +44,7 @@ def generate_si_from_receipts():
             if device:
                 pos_profile = _get_device_pos_profile(device)
             company = frappe.db.get_value('POS Profile', pos_profile, 'company')
-            receipt_customer = frappe.db.get_value('POS Profile', pos_profile, 'customer')
+            receipt_customer = frappe.db.sql(""" SELECT * FROM `tabCustomer` WHERE id=%s """,receipt.customer, as_dict=True)[0].name
 
         customer_name = frappe.db.get_value(
             'Customer',
@@ -63,7 +63,14 @@ def generate_si_from_receipts():
 
         if len(type) > 0:
             mop = _get_mode_of_payment(type, receipt.name,device=device)
+        if receipt_info.mobile_number:
+            mobile_number = frappe.db.sql(""" SELECT * FROM `tabMobile Numbers` WHERE name=%s """, receipt_info.mobile_number, as_dict=True)
+            if len(mobile_number) > 0:
+                frappe.db.sql(""" UPDATE `tabCustomer` SET loyalty_program=%s WHERE name=%s""", (mobile_number[0].loyalty_program,receipt_customer or customer))
+                frappe.db.commit()
 
+        print("CUSTOOOMER")
+        print(receipt_customer or customer)
         si = frappe.get_doc({
             'doctype': 'Sales Invoice',
             'is_pos': 1,
@@ -74,7 +81,10 @@ def generate_si_from_receipts():
             "customer": receipt_customer or customer,
             "customer_name": customer_name,
             "title": customer_name,
-            "receipt": True
+            "receipt": True,
+            "redeem_loyalty_points": receipt_info.loyalty_type == "Redeemed",
+            "loyalty_points": int(receipt_info.loyalty_points) if receipt_info.loyalty_type == "Redeemed" else 0,
+            "loyalty_amount": int(receipt_info.loyalty_points) if receipt_info.loyalty_type == "Redeemed" else 0
         })
         item_tax_template_record = []
         for item in items:
@@ -121,7 +131,13 @@ def _insert_invoice(invoice, mop, taxes_total,receipt, submit=False, allow_negat
     invoice.set_missing_values()
     invoice.paid_amount = total_paid
     invoice.round_off = receipt.roundoff
-
+    if invoice.loyalty_program:
+        if receipt.loyalty_type == "Redeemed":
+            loyalty_program = frappe.db.sql(""" SELECT * FROM `tabLoyalty Program` WHERE name=%s """,
+                                            invoice.loyalty_program, as_dict=True)
+            if len(loyalty_program) > 0:
+                invoice.loyalty_redemption_account = loyalty_program[0].expense_account
+                invoice.loyalty_redemption_cost_center = loyalty_program[0].cost_center
     if receipt.roundoff:
         value = (round(float(invoice.grand_total), 2) + round(float(receipt.taxesvalue), 2)) - float(
             receipt.discount_amount)

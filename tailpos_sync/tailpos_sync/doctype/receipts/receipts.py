@@ -32,7 +32,8 @@ class Receipts(Document):
 
 	def compute_total(self):
 		total = (float(self.subtotal) + float(self.taxesvalue)) - float(self.discount_amount)
-
+		if self.loyalty_type == "Redeemed":
+			total -= int(self.loyalty_points)
 		if self.roundoff:
 			remainder = float(total) % int(total)
 			print(remainder)
@@ -56,7 +57,7 @@ class Receipts(Document):
 
 	def compute_discount(self):
 		if self.discounttype == "Percentage":
-			self.discount_amount = round((self.discountvalue/100) * self.subtotal,2)
+			self.discount_amount = round((float(self.discountvalue)/100) * self.subtotal,2)
 		else:
 			self.discount_amount = self.discountvalue
 	def validate(self):

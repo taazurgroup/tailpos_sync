@@ -70,7 +70,6 @@ def sync_data(data):
 def get_device(device_id):
     payment_types = []
     if device_id:
-        print(device_id)
         try:
             device_record = frappe.get_doc("Device", device_id)
             if device_record:
@@ -116,6 +115,7 @@ def check_modified(data, frappe_table):
 
 
 def _sync_to_erpnext(tailpos_data, deleted_records,device_id):
+    print(tailpos_data)
     for row in tailpos_data:
         receipt_total = 0
 
@@ -141,9 +141,10 @@ def _sync_to_erpnext(tailpos_data, deleted_records,device_id):
                 insert_data(row, frappe_table, receipt_total)
         else:
             frappe_table = new_doc(row)
-
+            print(frappe_table)
             try:
                 frappe_table.insert(ignore_permissions=True)
+
             except:
                 frappe.log_error(frappe.get_traceback(), 'sync failed')
 

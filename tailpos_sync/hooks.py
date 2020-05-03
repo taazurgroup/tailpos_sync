@@ -45,7 +45,8 @@ fixtures = [
                     "Error Log-pin",
                     "Item-arabic_text",
                     "Sales Invoice-receipt",
-                    "Item Tax Template Detail-tax_translation"
+                    "Item Tax Template Detail-tax_translation",
+                    "Loyalty Program-default"
                 ]
             ]
         ]
@@ -70,7 +71,7 @@ fixtures = [
 doctype_js = {
     "Payment Entry" : "public/js/payment_entry.js",
     "Customer" : "public/js/customer.js",
-    "Sales Invoice" : "public/js/sales_invoice.js"
+    "Sales Invoice" : "public/js/sales_invoice.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -136,6 +137,9 @@ doc_events = {
     },
     "Payment Entry": {
         "on_submit": "tailpos_sync.doc_events.payment_entry.on_submit",
+    },
+    "Loyalty Program": {
+        "validate": "tailpos_sync.doc_events.loyalty_program.update_loyalty_programs",
     },
 }
 

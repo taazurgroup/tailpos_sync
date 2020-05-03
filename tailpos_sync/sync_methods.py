@@ -7,7 +7,7 @@ from .utils import get_items_with_price_list_query,get_device_categories
 
 
 def get_tables_for_sync():
-    return ['Item', 'Customer', 'Categories', 'Discounts', 'Attendants']
+    return ['Item', 'Customer', 'Categories', 'Discounts', 'Attendants', 'Mobile Numbers']
 
 
 def get_item_query(pos_profile,device):
@@ -79,7 +79,8 @@ def insert_data(data, frappe_table, receipt_total):
     db_name = data['dbName']
     for key, value in sync_object.items():
         field_name = str(key).lower()
-
+        if field_name == "_id":
+            field_name = "id"
         if field_name == "taxes":
             value = ""
 
@@ -191,8 +192,10 @@ def sync_from_erpnext(device=None, force_sync=True):
     pos_profile = frappe.db.get_value('Device', device, 'pos_profile')
 
     default_company = get_default_company(device)
+    loyalty = get_mobile_numbers()
     data.extend(default_company)
-
+    data.extend(loyalty)
+    print(data)
     for table in tables:
         query = get_table_select_query(table,device, force_sync, pos_profile=pos_profile)
         query_data = frappe.db.sql(query, as_dict=True)
@@ -316,10 +319,26 @@ def new_doc(data, owner='Administrator'):
             'receipt_lines': get_receipt_lines(sync_object['lines']),
             'receipt_taxes': get_taxes(sync_object['lines']),
             'subtotal': subtotal(sync_object['lines']),
+            'mobile_number': sync_object['mobileNumber'],
+            'loyalty_points': sync_object['points'],
+            'loyalty_type': "Redeemed" if sync_object['usePoints'] else "Added to balance" ,
+        })
+    elif db_name == 'Mobile Numbers':
+        doc.update({
+            'mobile_number': sync_object['customer_number'],
+            'points': sync_object['points'],
+            'loyalty_program': get_default_loyalty_program()
         })
 
     return frappe.get_doc(doc)
 
+def get_default_loyalty_program():
+    loyalty = frappe.db.sql(""" SELECT * FROM `tabLoyalty Program` AS LP WHERE LP.default=1 """, as_dict=True)
+    if len(loyalty) > 0:
+        return loyalty[0].name
+    else:
+        frappe.log_error("Please Set Default Loyalty Program", 'sync failed')
+        return ""
 def get_payment_types(payment):
     _payment_types = []
 
@@ -436,18 +455,51 @@ def update_sync_data(data, table):
     return res
 
 
+def get_mobile_numbers():
+    mobile_numbers = frappe.db.sql(""" 
+                  SELECT 
+                    MN.name as name, 
+                    MN.points as points ,
+                    LPC.collection_factor as loyaltyProgram
+                  FROM `tabMobile Numbers` as MN
+                  INNER JOIN `tabLoyalty Program` as LP ON LP.name = MN.loyalty_program
+                  INNER JOIN `tabLoyalty Program Collection` AS LPC ON LPC.parent = LP.name""", as_dict=True)
+
+    res = []
+    for i in mobile_numbers:
+        res.append({
+            "tableNames": "Loyalty",
+            "syncObject": i
+        })
+    print(res)
+    return res
 def get_default_company(device):
     default_company = frappe.get_single('Tail Settings')
     default_company_from_device = frappe.db.get_value('Device', device, 'company')
     device_record = frappe.get_doc("Device", device)
+    loyalty_program = frappe.db.sql(""" 
+                  SELECT * FROM `tabLoyalty Program` as LP 
+                  INNER JOIN `tabLoyalty Program Collection` as LPC ON LPC.parent = LP.name 
+                  WHERE LP.default=1 """, as_dict=True)
+    loyalty = 0
+    if len(loyalty_program) > 0:
+        loyalty = loyalty_program[0].collection_factor
+
     if default_company_from_device:
         default_company.company_name = default_company_from_device
+
+
     res = []
     res.append({
         'tableNames': "Company",
         'syncObject': default_company,
-        'device': device_record
+        'device': device_record,
+        'loyalty': loyalty
     })
+    print("REEEEEEEEEEEEES")
+    print(default_company.__dict__)
+    
+
     return res
 
 def _get_discount_type(percentage_type):
