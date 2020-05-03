@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
-frappe.query_reports["Item Wise Sales Report"] = {
+frappe.query_reports["Sales Register Summary Report"] = {
 	"filters": [
 		{
 			"fieldname": "from_date",
@@ -23,11 +23,5 @@ frappe.query_reports["Item Wise Sales Report"] = {
 			"fieldtype": "Link",
 			"options": "Device",
 		},
-		{
-			"fieldname": "category",
-			"label": __("Category"),
-			"fieldtype": "Link",
-			"options": "Categories",
-		}
 	]
 };
