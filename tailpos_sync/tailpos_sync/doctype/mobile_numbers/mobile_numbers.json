@@ -1,0 +1,70 @@
+{
+ "autoname": "field:mobile_number",
+ "creation": "2020-05-02 07:30:45.807714",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mobile_number",
+  "loyalty_program",
+  "id",
+  "points",
+  "date_updated"
+ ],
+ "fields": [
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "loyalty_program",
+   "fieldtype": "Link",
+   "label": "Loyalty Program",
+   "options": "Loyalty Program"
+  },
+  {
+   "fieldname": "points",
+   "fieldtype": "Data",
+   "label": "Point",
+   "read_only": 1
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_updated",
+   "fieldtype": "Data",
+   "label": "Date Updated",
+   "read_only": 1
+  }
+ ],
+ "modified": "2020-05-03 04:51:16.578180",
+ "modified_by": "Administrator",
+ "module": "TailPOS Sync",
+ "name": "Mobile Numbers",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
