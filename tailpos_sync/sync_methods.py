@@ -323,7 +323,10 @@ def new_doc(data, owner='Administrator'):
             'loyalty_points': sync_object['points'],
             'loyalty_type': "Redeemed" if sync_object['usePoints'] else "Added to balance" ,
         })
+        if sync_object['mobileNumber']:
+            create_customer(sync_object['mobileNumber'])
     elif db_name == 'Mobile Numbers':
+        print("NAA DIRIIII")
         doc.update({
             'mobile_number': sync_object['customer_number'],
             'points': sync_object['points'],
@@ -331,6 +334,14 @@ def new_doc(data, owner='Administrator'):
         })
 
     return frappe.get_doc(doc)
+def create_customer(mobile_number):
+    customer_check = frappe.db.sql(""" SELECT * FROM `tabCustomer` WHERE mobile_no=%s """, mobile_number, as_dict=1)
+    if len(customer_check) == 0:
+        frappe.get_doc({
+            "doctype": "Customer",
+            "mobile_no": mobile_number,
+            'customer_name': "Customer/" + str(mobile_number)
+        }).insert()
 
 def get_default_loyalty_program():
     loyalty = frappe.db.sql(""" SELECT * FROM `tabLoyalty Program` AS LP WHERE LP.default=1 """, as_dict=True)

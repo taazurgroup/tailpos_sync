@@ -71,9 +71,6 @@ def generate_si_from_receipts():
             customer_record = frappe.db.sql(""" SELECT * FROM `tabCustomer` WHERE mobile_no=%s """,receipt_info.mobile_number, as_dict=1)
             if len(customer_record) > 0:
                 receipt_customer = customer_record[0].name
-            else:
-                frappe.db.sql(""" UPDATE `tabCustomer` SET mobile_no=%s WHERE id=%s""", (receipt_info.mobile_number,receipt_info.customer) )
-                frappe.db.commit()
 
             mobile_number = frappe.db.sql(""" SELECT * FROM `tabMobile Numbers` WHERE name=%s """, receipt_info.mobile_number, as_dict=True)
             if len(mobile_number) > 0:
@@ -122,9 +119,7 @@ def get_debit_to(company):
 def _insert_invoice(invoice, mop, taxes_total,receipt, submit=False, allow_negative_stock=False):
     invoice.insert()
     total_paid = 0
-    print("mop")
     if len(mop) > 0:
-        print(mop)
         for x in mop:
             invoice.append('payments', {
                 'mode_of_payment': x['mode_of_payment'],
