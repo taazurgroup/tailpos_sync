@@ -35,7 +35,7 @@ def generate_si_from_receipts():
         device = frappe.db.get_value('Receipts', receipt.name, 'deviceid')
         mop = 'Cash'
 
-        receipt_customer = None
+        receipt_customer = customer
 
         if not get_device(device):
             device = None
@@ -48,7 +48,7 @@ def generate_si_from_receipts():
 
         customer_name = frappe.db.get_value(
             'Customer',
-            receipt_customer or customer,
+            receipt_customer,
             'customer_name'
         )
 
@@ -63,14 +63,21 @@ def generate_si_from_receipts():
 
         if len(type) > 0:
             mop = _get_mode_of_payment(type, receipt.name,device=device)
+
         if receipt_info.mobile_number:
-            mobile_number = frappe.db.sql(""" SELECT * FROM `tabMobile Numbers` WHERE name=%s """, receipt_info.mobile_number, as_dict=True)
-            if len(mobile_number) > 0:
-                frappe.db.sql(""" UPDATE `tabCustomer` SET loyalty_program=%s WHERE name=%s""", (mobile_number[0].loyalty_program,receipt_customer or customer))
+
+            customer_record = frappe.db.sql(""" SELECT * FROM `tabCustomer` WHERE mobile_no=%s """,receipt_info.mobile_number, as_dict=1)
+            if len(customer) > 0:
+                receipt_customer = customer_record[0].name
+            else:
+                frappe.db.sql(""" UPDATE `tabCustomer` SET mobile_no=%s """, receipt_info.mobile_number)
                 frappe.db.commit()
 
-        print("CUSTOOOMER")
-        print(receipt_customer or customer)
+            mobile_number = frappe.db.sql(""" SELECT * FROM `tabMobile Numbers` WHERE name=%s """, receipt_info.mobile_number, as_dict=True)
+            if len(mobile_number) > 0:
+                frappe.db.sql(""" UPDATE `tabCustomer` SET loyalty_program=%s WHERE name=%s""", (mobile_number[0].loyalty_program,receipt_customer))
+                frappe.db.commit()
+
         si = frappe.get_doc({
             'doctype': 'Sales Invoice',
             'is_pos': 1,
@@ -78,7 +85,7 @@ def generate_si_from_receipts():
             'company': company,
             "debit_to": debit_to,
             "due_date": receipt_info.date,
-            "customer": receipt_customer or customer,
+            "customer": receipt_customer,
             "customer_name": customer_name,
             "title": customer_name,
             "receipt": True,
