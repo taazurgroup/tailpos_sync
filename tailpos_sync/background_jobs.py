@@ -67,7 +67,7 @@ def generate_si_from_receipts():
         if receipt_info.mobile_number:
 
             customer_record = frappe.db.sql(""" SELECT * FROM `tabCustomer` WHERE mobile_no=%s """,receipt_info.mobile_number, as_dict=1)
-            if len(customer) > 0:
+            if len(customer_record) > 0:
                 receipt_customer = customer_record[0].name
             else:
                 frappe.db.sql(""" UPDATE `tabCustomer` SET mobile_no=%s """, receipt_info.mobile_number)
