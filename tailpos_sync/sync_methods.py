@@ -257,7 +257,13 @@ def new_doc(data, owner='Administrator'):
             'barcode': sync_object['barcode'],
             'standard_rate': sync_object['price']
         })
-
+    elif db_name == 'Mobile Numbers':
+        print("NAA DIRIIII")
+        doc.update({
+            'mobile_number': sync_object['customer_number'],
+            'points': sync_object['points'],
+            'loyalty_program': get_default_loyalty_program()
+        })
     elif db_name == 'Customer':
         doc.update({
             'customer_name': sync_object['name']
@@ -325,13 +331,7 @@ def new_doc(data, owner='Administrator'):
         })
         if sync_object['mobileNumber']:
             create_customer(sync_object['mobileNumber'])
-    elif db_name == 'Mobile Numbers':
-        print("NAA DIRIIII")
-        doc.update({
-            'mobile_number': sync_object['customer_number'],
-            'points': sync_object['points'],
-            'loyalty_program': get_default_loyalty_program()
-        })
+
 
     return frappe.get_doc(doc)
 def create_customer(mobile_number):
