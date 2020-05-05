@@ -46,7 +46,7 @@ def generate_si_from_receipts():
                 company = frappe.db.get_value('POS Profile', pos_profile, 'company')
             customer = frappe.db.get_value('POS Profile', pos_profile, 'customer')
 
-            receipt_customer = frappe.db.sql(""" SELECT * FROM `tabCustomer` WHERE id=%s """,receipt.customer, as_dict=True)[0].name
+            # receipt_customer = frappe.db.sql(""" SELECT * FROM `tabCustomer` WHERE id=%s """,receipt.customer, as_dict=True)[0].name
 
         customer_name = frappe.db.get_value(
             'Customer',
