@@ -91,9 +91,9 @@ def generate_si_from_receipts():
             "customer_name": customer_name,
             "title": customer_name,
             "receipt": True,
-            "redeem_loyalty_points": receipt_info.loyalty_type == "Redeemed",
-            "loyalty_points": int(receipt_info.loyalty_points) if receipt_info.loyalty_type == "Redeemed" else 0,
-            "loyalty_amount": int(receipt_info.loyalty_points) if receipt_info.loyalty_type == "Redeemed" else 0
+            "redeem_loyalty_points": (receipt_info.loyalty_type == "Redeemed" and receipt_info.mobile_number) ,
+            "loyalty_points": int(receipt_info.loyalty_points) if receipt_info.loyalty_type == "Redeemed" and receipt_info.mobile_number else 0,
+            "loyalty_amount": int(receipt_info.loyalty_points) if receipt_info.loyalty_type == "Redeemed" and receipt_info.mobile_number else 0
         })
         item_tax_template_record = []
         for item in items:
