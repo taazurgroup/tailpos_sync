@@ -65,19 +65,21 @@ def generate_si_from_receipts():
 
         if len(type) > 0:
             mop = _get_mode_of_payment(type, receipt.name,device=device)
-
+        customer__name = ""
         if receipt_info.mobile_number:
 
             customer_record = frappe.db.sql(""" SELECT * FROM `tabCustomer` WHERE mobile_no=%s """,receipt_info.mobile_number, as_dict=1)
             if len(customer_record) > 0:
                 receipt_customer = customer_record[0].name
+                customer_name = customer_record[0].customer_name
 
             mobile_number = frappe.db.sql(""" SELECT * FROM `tabMobile Numbers` WHERE name=%s """, receipt_info.mobile_number, as_dict=True)
             if len(mobile_number) > 0:
                 frappe.db.sql(""" UPDATE `tabCustomer` SET loyalty_program=%s WHERE name=%s""", (mobile_number[0].loyalty_program,receipt_customer))
                 frappe.db.commit()
 
-
+        if not customer__name:
+            receipt_customer = customer
         si = frappe.get_doc({
             'doctype': 'Sales Invoice',
             'is_pos': 1,
