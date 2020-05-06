@@ -334,8 +334,10 @@ def new_doc(data, owner='Administrator'):
 
 
     return frappe.get_doc(doc)
+
 def create_customer(mobile_number):
-    customer_check = frappe.db.sql(""" SELECT * FROM `tabCustomer` WHERE mobile_no=%s """, mobile_number, as_dict=1)
+    customer_name = "Customer/" + str(mobile_number)
+    customer_check = frappe.db.sql(""" SELECT * FROM `tabCustomer` WHERE mobile_no=%s and customer_name=%s""", (mobile_number,customer_name), as_dict=1)
     if len(customer_check) == 0:
         frappe.get_doc({
             "doctype": "Customer",
