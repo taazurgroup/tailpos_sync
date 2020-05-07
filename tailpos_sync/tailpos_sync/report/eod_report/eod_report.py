@@ -18,6 +18,7 @@ def execute(filters=None):
 		columns.append({"fieldname": "store_name", "label": "Store Name", "fieldtype": "Data", "width": 150})
 		columns.append({"fieldname": "discount", "label": "Discount", "fieldtype": "Data", "width": 100})
 		columns.append({"fieldname": "write_off", "label": "Write Off", "fieldtype": "Data", "width": 100})
+		columns.append({"fieldname": "loyalty", "label": "Loyalty", "fieldtype": "Data", "width": 100})
 		columns.append({"fieldname": "net_sale", "label": "Net Sale", "fieldtype": "Data", "width": 100})
 		columns.append({"fieldname": "vat", "label": "VAT", "fieldtype": "Data", "width": 100})
 		columns.append({"fieldname": "gross_sale", "label": "Gross Sale", "fieldtype": "Data", "width": 100})
@@ -33,6 +34,7 @@ def execute(filters=None):
 				"store_name": i.pos_profile,
 				"discount": i.discount_amount,
 				"write_off": i.write_off_amount,
+				"loyalty": i.loyalty_amount,
 				"net_sale": i.total,
 				"gross_sale": i.grand_total,
 				"vat": i.total_taxes_and_charges,
