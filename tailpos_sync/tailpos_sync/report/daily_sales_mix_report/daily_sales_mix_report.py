@@ -89,8 +89,8 @@ def execute(filters=None):
 				if add_:
 					columns.append({
 						"fieldname": total1['name'] + "1",
-						"label": total1['name'],
-						"fieldtype": "Percent",
+						"label": total1['name'] + "(%)",
+						"fieldtype": "Data",
 						"width": 150
 					})
 
