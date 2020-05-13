@@ -46,8 +46,10 @@ def before_submit(doc, method):
             if doc.loyalty_amount > 0:
                 paid_amount = doc.paid_amount
                 doc.paid_amount = paid_amount - doc.loyalty_amount
+        doc.status = "Paid"
 def after_submit(doc, method):
     if doc.receipt:
         doc.posting_date = doc.due_date
+        doc.status = "Paid"
         doc.outstanding_amount = 0
 
