@@ -119,71 +119,74 @@ def get_debit_to(company):
 
 
 def _insert_invoice(invoice, mop, taxes_total,receipt, submit=False, allow_negative_stock=False):
-    invoice.insert()
-    total_paid = 0
-    if len(mop) > 0:
-        for x in mop:
-            invoice.append('payments', {
-                'mode_of_payment': x['mode_of_payment'],
-                'type': x['type'],
-                'amount': x['amount']
-            })
+    try:
+        invoice.insert()
+        total_paid = 0
+        if len(mop) > 0:
+            for x in mop:
+                invoice.append('payments', {
+                    'mode_of_payment': x['mode_of_payment'],
+                    'type': x['type'],
+                    'amount': x['amount']
+                })
 
-            total_paid += x['amount']
+                total_paid += x['amount']
 
-    else:
-        invoice.append('payments', {
-            'mode_of_payment': "Cash",
-            'amount': invoice.outstanding_amount
-        })
-        total_paid += invoice.outstanding_amount
-    invoice.set_missing_values()
-    invoice.paid_amount = total_paid
-    invoice.round_off = receipt.roundoff
-    if invoice.loyalty_program:
-        if receipt.loyalty_type == "Redeemed":
-            loyalty_program = frappe.db.sql(""" SELECT * FROM `tabLoyalty Program` WHERE name=%s """,
-                                            invoice.loyalty_program, as_dict=True)
-            if len(loyalty_program) > 0:
-                invoice.loyalty_redemption_account = loyalty_program[0].expense_account
-                invoice.loyalty_redemption_cost_center = loyalty_program[0].cost_center
-    if receipt.roundoff:
-        value = (round(float(invoice.grand_total), 2) + round(float(receipt.taxesvalue), 2)) - float(
-            receipt.discount_amount)
-        remainder = float(value) % int(value)
-        if remainder > 0.05:
-            value = (int(value) + 1) - value
         else:
-            value = value - int(value)
-        invoice.write_off_amount = value
-    invoice.change_amount = 0
-    invoice.base_change_amount = 0
-    if float(receipt.discount_amount) > 0:
-        invoice.apply_discount_on = "Net Total"
-        invoice.additional_discount_percentage = float(receipt.discountvalue) if receipt.discounttype == "Percentage" else 0
-        invoice.discount_amount = float(receipt.discount_amount)
-
-
-    from frappe.utils import money_in_words
-
-    invoice.in_words = money_in_words(round(float(invoice.grand_total),2), invoice.currency)
-    invoice.save()
-    frappe.db.set_value("Sales Invoice", invoice.name, "tax_category", "")
-
-    check_stock_qty = _check_items_zero_qty(invoice.items)
-    if check_stock_qty and allow_negative_stock:
-        check_stock_qty = False
-    invoice.reload()
-    if submit and not check_stock_qty:
-        invoice.submit()
+            invoice.append('payments', {
+                'mode_of_payment': "Cash",
+                'amount': invoice.outstanding_amount
+            })
+            total_paid += invoice.outstanding_amount
+        invoice.set_missing_values()
+        invoice.paid_amount = total_paid
+        invoice.round_off = receipt.roundoff
         if invoice.loyalty_program:
-            if invoice.loyalty_amount > 0:
-                grand_total = invoice.grand_total - invoice.loyalty_amount
-                frappe.db.set_value("Sales Invoice", invoice.name, "grand_total", grand_total)
+            if receipt.loyalty_type == "Redeemed":
+                loyalty_program = frappe.db.sql(""" SELECT * FROM `tabLoyalty Program` WHERE name=%s """,
+                                                invoice.loyalty_program, as_dict=True)
+                if len(loyalty_program) > 0:
+                    invoice.loyalty_redemption_account = loyalty_program[0].expense_account
+                    invoice.loyalty_redemption_cost_center = loyalty_program[0].cost_center
+        if receipt.roundoff:
+            value = (round(float(invoice.grand_total), 2) + round(float(receipt.taxesvalue), 2)) - float(
+                receipt.discount_amount)
+            remainder = float(value) % int(value)
+            if remainder > 0.05:
+                value = (int(value) + 1) - value
+            else:
+                value = value - int(value)
+            invoice.write_off_amount = value
+        invoice.change_amount = 0
+        invoice.base_change_amount = 0
+        if float(receipt.discount_amount) > 0:
+            invoice.apply_discount_on = "Net Total"
+            invoice.additional_discount_percentage = float(receipt.discountvalue) if receipt.discounttype == "Percentage" else 0
+            invoice.discount_amount = float(receipt.discount_amount)
 
-        frappe.db.set_value("Sales Invoice", invoice.name, "status", "Paid")
-        frappe.db.set_value("Sales Invoice", invoice.name, "outstanding_amount", 0)
-        frappe.db.commit()
+
+        from frappe.utils import money_in_words
+
+        invoice.in_words = money_in_words(round(float(invoice.grand_total),2), invoice.currency)
+        invoice.save()
+        frappe.db.set_value("Sales Invoice", invoice.name, "tax_category", "")
+
+        check_stock_qty = _check_items_zero_qty(invoice.items)
+        if check_stock_qty and allow_negative_stock:
+            check_stock_qty = False
+        invoice.reload()
+        if submit and not check_stock_qty:
+            invoice.submit()
+            if invoice.loyalty_program:
+                if invoice.loyalty_amount > 0:
+                    grand_total = invoice.grand_total - invoice.loyalty_amount
+                    frappe.db.set_value("Sales Invoice", invoice.name, "grand_total", grand_total)
+
+            frappe.db.set_value("Sales Invoice", invoice.name, "status", "Paid")
+            frappe.db.set_value("Sales Invoice", invoice.name, "outstanding_amount", 0)
+            frappe.db.commit()
+    except:
+        frappe.log_error("Check Receipt" + receipt.name, 'sync failed')
 def get_device(device):
     device_data = frappe.db.sql(""" SELECT * FROM `tabDevice` WHERE name=%s """, device)
     if len(device_data) > 0:
