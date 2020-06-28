@@ -186,7 +186,8 @@ def _insert_invoice(invoice, mop, taxes_total,receipt, submit=False, allow_negat
             frappe.db.set_value("Sales Invoice", invoice.name, "outstanding_amount", 0)
             frappe.db.commit()
     except:
-        frappe.log_error("Check Receipt" + receipt.name, 'sync failed')
+
+        frappe.log_error("Check Receipt" + receipt.name + "With Error" + frappe.get_traceback(), 'sync failed')
 def get_device(device):
     device_data = frappe.db.sql(""" SELECT * FROM `tabDevice` WHERE name=%s """, device)
     if len(device_data) > 0:
