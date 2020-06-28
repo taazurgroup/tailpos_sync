@@ -72,10 +72,10 @@ class calculate_taxes_and_totals(object):
 
 				taxes = _get_item_tax_template(args, item_taxes + item_group_taxes, for_validate=True)
 
-				#if item.item_tax_template not in taxes:
-				#	frappe.throw(_("Row {0}: Invalid Item Tax Template for item {1}").format(
-				#		item.idx, frappe.bold(item.item_code)
-				#	))
+				# if item.item_tax_template not in taxes:
+				# 	frappe.throw(_("Row {0}: Invalid Item Tax Template for item {1}").format(
+				# 		item.idx, frappe.bold(item.item_code)
+				# 	))
 
 	def validate_conversion_rate(self):
 		# validate conversion rate
@@ -421,7 +421,7 @@ class calculate_taxes_and_totals(object):
 			tax.item_wise_tax_detail = json.dumps(tax.item_wise_tax_detail, separators=(',', ':'))
 
 	def set_discount_amount(self):
-		if self.doc.additional_discount_percentage and float(self.doc.additional_discount_percentage) > 0:
+		if self.doc.additional_discount_percentage:
 			self.doc.discount_amount = flt(flt(self.doc.get(scrub(self.doc.apply_discount_on)))
 				* self.doc.additional_discount_percentage / 100, self.doc.precision("discount_amount"))
 
@@ -643,8 +643,7 @@ def get_itemised_tax_breakup_html(doc):
 			itemised_tax=itemised_tax,
 			itemised_taxable_amount=itemised_taxable_amount,
 			tax_accounts=tax_accounts,
-			conversion_rate=doc.conversion_rate,
-			currency=doc.currency
+			doc=doc
 		)
 	)
 
