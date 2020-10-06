@@ -1,0 +1,31 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "Payment Terms Template Detail",
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2019-02-28 09:03:06.417851",
+   "default_value": null,
+   "doc_type": "Payment Terms Template Detail",
+   "docstatus": 0,
+   "doctype_or_field": "DocType",
+   "field_name": "",
+   "idx": 0,
+   "modified": "2019-02-28 09:03:06.417851",
+   "modified_by": "Administrator",
+   "name": "Payment Terms Template Detail-autoname",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "autoname",
+   "property_type": "",
+   "value": "PTTD.#####"
+  }
+ ],
+ "sync_on_migrate": 1
+}

@@ -141,6 +141,7 @@ doc_events = {
     "Loyalty Program": {
         "validate": "tailpos_sync.doc_events.loyalty_program.update_loyalty_programs",
     },
+
 }
 
 # Scheduled Tasks
