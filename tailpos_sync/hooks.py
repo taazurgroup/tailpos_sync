@@ -50,7 +50,18 @@ fixtures = [
                 ]
             ]
         ]
-    }
+    },
+    "Custom Script",
+    "Property Setter",
+    "Print Format",
+    "Report",
+    "Role",
+    "DocType",
+    "Letter Head",
+    "Workflow",
+    "Workflow State",
+    "Workflow Action",
+    "Custom Field"
 ]
 
 # Includes in <head>

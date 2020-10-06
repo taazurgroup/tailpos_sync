@@ -1,0 +1,112 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Loan Application",
+  "modified": "2019-10-09 11:28:42.593346",
+  "name": "Loan Application-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": ""
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Loan",
+  "modified": "2020-05-28 13:35:39.294739",
+  "name": "Loan-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Loan', {\n\trefresh(frm) {\n\t\t// your code here\n\t\tcur_frm.set_query(\"ind_ssa\", function(doc) {\n\t\t    return {\n\t\t        filters: {\n\t\t            \"employee\": cur_frm.doc.applicant\n\t\t        }\n\t\t    };\n\t\t}\n\t\t);\n\t\t\n\t},\n\tapplicant(frm){\n\t\t    //this will fetch and set the most recent assignment.\n        frappe.db.get_link_options('Salary Structure Assignment', '',\n            {\n\t\t\t\temployee: cur_frm.doc.applicant\n\t\t\t}\n\t\t).then(all_ssa =>{\n\t\t    frm.set_value(\"ind_ssa\", all_ssa[0].value);\n\t\t});\n\t},\n    validate(frm) {\n\n        if (!frm.doc.ind_employee_from_ssa)\n\n        {\n            msgprint('Please create SSA for selected Employee');\n            validated = false;\n        }\n        \n        if(frm.doc.ind_employee_from_ssa && frm.doc.applicant!=frm.doc.ind_employee_from_ssa) \n\n        {\n            msgprint('Please refresh and select the employee');\n            validated = false;\n        }         \n        \n//        frm.doc.ind_maximum_monthly_deduction_allowed = frm.doc.ind_base_salary*0.40;\n        \n        if(frm.doc.monthly_repayment_amount > frm.doc.ind_maximum_monthly_deduction_allowed) \n        {\n            msgprint(\"Monthly deduction exceeded\");\n            validated = false;\n        }\n    },\n\n});\n"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Salary Structure Assignment",
+  "modified": "2020-04-16 00:19:31.714461",
+  "name": "Salary Structure Assignment-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Salary Structure Assignment',  {\n    refresh: function(frm) {\n\t\t// your code here\n\t\tfrm.doc.ind_gross_salary=frm.doc.base+frm.doc.ind_food_allowance+frm.doc.ind_hra+frm.doc.ind_transport_allowance+frm.doc.ind_mobile_allowance+frm.doc.ind_other_allowance;\n\t\tfrm.doc.ind_maximum_monthly_deduction=frm.doc.base*0.40;\n\t}\n});"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Additional Salary",
+  "modified": "2020-03-29 13:45:52.641042",
+  "name": "Additional Salary-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Additional Salary', {\n\tsetup(frm) {\n\t\t// your code here\n\t\tcur_frm.set_query(\"ind_ssa\", function(doc) {\n\t\t    return {\n\t\t        filters: {\n\t\t            \"employee\": cur_frm.doc.employee\n\t\t        }\n\t\t    };\n\t\t}\n\t\t);\n\t\t\n\t},\n\temployee(frm){\n\t\t    //this will fetch and set the most recent assignment.\n        frappe.db.get_link_options('Salary Structure Assignment', '',\n            {\n\t\t\t\temployee: cur_frm.doc.employee\n\t\t\t}\n\t\t).then(all_ssa =>{\n\t\t    frm.set_value(\"ind_ssa\", all_ssa[0].value);\n\t\t});\n\t},\n\t\n\tvalidate(frm){\n\t    if(frm.doc.salary_component==\"Over Time\"){\n\t        frm.doc.ind_basic_salary_per_hour=frm.doc.ind_basic_salary/240;\n\t        frm.doc.amount=frm.doc.ind_overtime_hours*frm.doc.ind_overtime_rate_per_hour*frm.doc.ind_basic_salary_per_hour;\n\t    }\n\t}\n\t\n}\n\n\n\n);\n"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Employee",
+  "modified": "2020-06-04 01:40:43.613376",
+  "name": "Employee-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "//frappe.ui.form.on('Employee', {\n//\trefresh(frm) {\n//\t\t// your code here\n//\t\tif(frm.doc.taa_is_standby==\"Yes\"){\n//\t\t    frm.doc.taa_standby_food_allowance_payable=frm.doc.taa_standby_days*10;\n//\t\t}\n//\t}\n//})"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Expense Claim",
+  "modified": "2020-08-19 03:15:02.619183",
+  "name": "Expense Claim-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Expense Claim Detail', {\n    expense_type: function (frm, cdt, cdn) {\n        var row = locals[cdt][cdn];\n        if(row.expense_type==\"Vehicle Fuel  & Maintenance\"){\n            frm.doc.taa_maintenance_approval_required=\"Yes\";\n        }\n    }\n});"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Sales Invoice",
+  "modified": "2020-09-05 16:41:04.815133",
+  "name": "Sales Invoice-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "cur_frm.add_fetch(\"company\", \"company_name_in_arabic\", \"company_name_in_arabic\");\ncur_frm.add_fetch(\"company\", \"company_address_in_arabic\", \"company_address_in_arabic\");\ncur_frm.add_fetch(\"customer\", \"customer_address_arabic\", \"customer_address_arabic\");\ncur_frm.add_fetch(\"company\", \"address\", \"company_address_display_1\");\nfrappe.ui.form.on(\"Sales Invoice\",{\ncustomer:function(frm){\nfrappe.call({\nmethod: 'frappe.client.get_value',\nargs: {\n'doctype': 'Address',\n'filters': {'customer': frm.doc.customer},\n'fieldname': ['address_line1']\n},\ncallback: function(r) {\nif (!r.exc) {\nfrm.set_value(\"address_display_1\",r.message.address_line1);\n\n// code snippet\n}\n}\n});\n}\n});"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Payroll Entry",
+  "modified": "2020-06-24 23:25:35.215556",
+  "name": "Payroll Entry-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Payroll Entry', {\n\tvalidate(frm) {\n\t\t// your code here\n\t\tif (frm.doc.taa_cost_center_disabled==\"1\"){\n\t\t    msgprint(\"Selected branch has been disabled for Payroll\");\n\t\t    validated=false;\n\t\t}\n\t}\n});"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Item Price",
+  "modified": "2020-07-05 16:21:38.267004",
+  "name": "Item Price-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Item Price', {\n\trefresh(frm) {\n\t\t// your code here\n\t\tfrm.doc.price_list_rate=frm.doc.taa_sales_price-frm.doc.taa_sales_price*15/100;\n\t}\n});"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Goods Delivery",
+  "modified": "2020-08-21 15:14:18.301299",
+  "name": "Goods Delivery-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Goods Delivery',  {\n    validate: function(frm) {\n        $.each(frm.doc.order_details,  function(i,  d) {\n            d.amount = d.qty * d.rate;\n        });\n    } \n})"
+ }
+]
