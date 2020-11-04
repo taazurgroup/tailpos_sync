@@ -25,12 +25,12 @@
   "docstatus": 0,
   "doctype": "Custom Script",
   "dt": "Salary Structure Assignment",
-  "modified": "2020-04-16 00:19:31.714461",
+  "modified": "2020-11-02 16:02:38.445991",
   "name": "Salary Structure Assignment-Client",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "script": "frappe.ui.form.on('Salary Structure Assignment',  {\n    refresh: function(frm) {\n\t\t// your code here\n\t\tfrm.doc.ind_gross_salary=frm.doc.base+frm.doc.ind_food_allowance+frm.doc.ind_hra+frm.doc.ind_transport_allowance+frm.doc.ind_mobile_allowance+frm.doc.ind_other_allowance;\n\t\tfrm.doc.ind_maximum_monthly_deduction=frm.doc.base*0.40;\n\t}\n});"
+  "script": "frappe.ui.form.on('Salary Structure Assignment',  {\n    refresh: function(frm) {\n\t\t// your code here\n\t\tfrm.doc.ind_gross_salary=frm.doc.base+frm.doc.ind_food_allowance+frm.doc.ind_hra+frm.doc.ind_transport_allowance+frm.doc.ind_mobile_allowance+frm.doc.ind_other_allowance;\n\t\tfrm.doc.ind_maximum_monthly_deduction=frm.doc.base*0.40;\n\t}\n});\n"
  },
  {
   "docstatus": 0,

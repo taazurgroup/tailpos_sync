@@ -4,7 +4,7 @@
   "doctype": "Workflow",
   "document_type": "Expense Claim",
   "is_active": 0,
-  "modified": "2020-06-05 23:00:34.743455",
+  "modified": "2020-10-21 11:11:03.951058",
   "name": "Expense Claim",
   "override_status": 1,
   "parent": null,
@@ -13,7 +13,7 @@
   "send_email_alert": 0,
   "states": [
    {
-    "allow_edit": "Special Site Users",
+    "allow_edit": "Expense Approver",
     "doc_status": "0",
     "is_optional_state": 0,
     "message": null,
@@ -26,7 +26,7 @@
     "update_value": null
    },
    {
-    "allow_edit": "Expense Approver",
+    "allow_edit": "Accounts Manager",
     "doc_status": "0",
     "is_optional_state": 0,
     "message": null,

@@ -2270,7 +2270,7 @@
   "is_standard": "No",
   "javascript": null,
   "json": "{\"order_by\": \"`tabTimesheet`.`modified` asc\", \"filters\": [], \"fields\": [[\"name\", \"Timesheet\"], [\"docstatus\", \"Timesheet\"], [\"employee\", \"Timesheet\"], [\"title\", \"Timesheet\"], [\"start_date\", \"Timesheet\"], [\"end_date\", \"Timesheet\"], [\"total_hours\", \"Timesheet\"], [\"total_billed_hours\", \"Timesheet\"], [\"status\", \"Timesheet\"]], \"add_totals_row\": true, \"add_total_row\": 0, \"page_length\": 20}",
-  "letter_head": "Taazur Contracting",
+  "letter_head": "Taazur Contracting old",
   "modified": "2019-02-28 15:02:12.743039",
   "module": "Projects",
   "name": "Timesheet Report",
@@ -5216,7 +5216,7 @@
   "is_standard": "No",
   "javascript": null,
   "json": "[{\"label\":\"Salary Slip ID\",\"fieldname\":\"Salary Slip ID\",\"fieldtype\":\"Link\",\"width\":150,\"options\":\"Salary Slip\",\"id\":\"Salary Slip ID\",\"name\":\"Salary Slip ID\",\"editable\":false,\"compareValue\":null},{\"label\":\"Employee\",\"fieldname\":\"Employee\",\"fieldtype\":\"Link\",\"width\":120,\"options\":\"Employee\",\"id\":\"Employee\",\"name\":\"Employee\",\"editable\":false,\"compareValue\":null},{\"label\":\"Employee Name\",\"fieldname\":\"Employee Name\",\"fieldtype\":\"\",\"width\":140,\"id\":\"Employee Name\",\"name\":\"Employee Name\",\"editable\":false,\"compareValue\":null},{\"label\":\"Date of Joining\",\"fieldname\":\"Date of Joining\",\"fieldtype\":\"\",\"width\":80,\"id\":\"Date of Joining\",\"name\":\"Date of Joining\",\"editable\":false,\"compareValue\":null},{\"label\":\"Branch\",\"fieldname\":\"Branch\",\"fieldtype\":\"Link\",\"width\":120,\"options\":\"Branch\",\"id\":\"Branch\",\"name\":\"Branch\",\"editable\":false,\"compareValue\":null},{\"label\":\"Department\",\"fieldname\":\"Department\",\"fieldtype\":\"Link\",\"width\":120,\"options\":\"Department\",\"id\":\"Department\",\"name\":\"Department\",\"editable\":false,\"compareValue\":null},{\"label\":\"Designation\",\"fieldname\":\"Designation\",\"fieldtype\":\"Link\",\"width\":-1,\"options\":\"Designation\",\"id\":\"Designation\",\"name\":\"Designation\",\"editable\":false,\"compareValue\":null},{\"label\":\"Company\",\"fieldname\":\"Company\",\"fieldtype\":\"Link\",\"width\":120,\"options\":\"Company\",\"id\":\"Company\",\"name\":\"Company\",\"editable\":false,\"compareValue\":null},{\"label\":\"Start Date\",\"fieldname\":\"Start Date\",\"fieldtype\":\"\",\"width\":80,\"id\":\"Start Date\",\"name\":\"Start Date\",\"editable\":false,\"compareValue\":null},{\"label\":\"End Date\",\"fieldname\":\"End Date\",\"fieldtype\":\"\",\"width\":80,\"id\":\"End Date\",\"name\":\"End Date\",\"editable\":false,\"compareValue\":null},{\"label\":\"Leave Without Pay\",\"fieldname\":\"Leave Without Pay\",\"fieldtype\":\"Float\",\"width\":-1,\"id\":\"Leave Without Pay\",\"name\":\"Leave Without Pay\",\"editable\":false,\"compareValue\":null},{\"label\":\"Payment Days\",\"fieldname\":\"Payment Days\",\"fieldtype\":\"Float\",\"width\":120,\"id\":\"Payment Days\",\"name\":\"Payment Days\",\"editable\":false,\"compareValue\":null},{\"label\":\"Basic\",\"fieldname\":\"Basic\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Basic\",\"name\":\"Basic\",\"editable\":false,\"compareValue\":null},{\"label\":\"Housing Allowance\",\"fieldname\":\"Housing Allowance\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Housing Allowance\",\"name\":\"Housing Allowance\",\"editable\":false,\"compareValue\":null},{\"label\":\"Transportation Allowance\",\"fieldname\":\"Transportation Allowance\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Transportation Allowance\",\"name\":\"Transportation Allowance\",\"editable\":false,\"compareValue\":null},{\"label\":\"Telephone Allowance\",\"fieldname\":\"Telephone Allowance\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Telephone Allowance\",\"name\":\"Telephone Allowance\",\"editable\":false,\"compareValue\":null},{\"label\":\"Vacation Settlement\",\"fieldname\":\"Vacation Settlement\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Vacation Settlement\",\"name\":\"Vacation Settlement\",\"editable\":false,\"compareValue\":null},{\"label\":\"End of Service Settlement\",\"fieldname\":\"End of Service Settlement\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"End of Service Settlement\",\"name\":\"End of Service Settlement\",\"editable\":false,\"compareValue\":null},{\"label\":\"Food Allowance\",\"fieldname\":\"Food Allowance\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Food Allowance\",\"name\":\"Food Allowance\",\"editable\":false,\"compareValue\":null},{\"label\":\"Over Time\",\"fieldname\":\"Over Time\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Over Time\",\"name\":\"Over Time\",\"editable\":false,\"compareValue\":null},{\"label\":\"Incentive\",\"fieldname\":\"Incentive\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Incentive\",\"name\":\"Incentive\",\"editable\":false,\"compareValue\":null},{\"label\":\"Other Allowance\",\"fieldname\":\"Other Allowance\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Other Allowance\",\"name\":\"Other Allowance\",\"editable\":false,\"compareValue\":null},{\"label\":\"GOSI Pay\",\"fieldname\":\"GOSI Pay\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"GOSI Pay\",\"name\":\"GOSI Pay\",\"editable\":false,\"compareValue\":null},{\"label\":\"Additional Salary\",\"fieldname\":\"Additional Salary\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Additional Salary\",\"name\":\"Additional Salary\",\"editable\":false,\"compareValue\":null},{\"label\":\"Food Allowance (Settlement)\",\"fieldname\":\"Food Allowance (Settlement)\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Food Allowance (Settlement)\",\"name\":\"Food Allowance (Settlement)\",\"editable\":false,\"compareValue\":null},{\"label\":\"Vacation Salary\",\"fieldname\":\"Vacation Salary\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Vacation Salary\",\"name\":\"Vacation Salary\",\"editable\":false,\"compareValue\":null},{\"label\":\"Gross Pay\",\"fieldname\":\"Gross Pay\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Gross Pay\",\"name\":\"Gross Pay\",\"editable\":false,\"compareValue\":null},{\"label\":\"Gosi\",\"fieldname\":\"Gosi\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Gosi\",\"name\":\"Gosi\",\"editable\":false,\"compareValue\":null},{\"label\":\"Late Deduction\",\"fieldname\":\"Late Deduction\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Late Deduction\",\"name\":\"Late Deduction\",\"editable\":false,\"compareValue\":null},{\"label\":\"Absent Deduction\",\"fieldname\":\"Absent Deduction\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Absent Deduction\",\"name\":\"Absent Deduction\",\"editable\":false,\"compareValue\":null},{\"label\":\"Loan Repayment\",\"fieldname\":\"Loan Repayment\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Loan Repayment\",\"name\":\"Loan Repayment\",\"editable\":false,\"compareValue\":null},{\"label\":\"Total Deduction\",\"fieldname\":\"Total Deduction\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Total Deduction\",\"name\":\"Total Deduction\",\"editable\":false,\"compareValue\":null},{\"label\":\"Net Pay\",\"fieldname\":\"Net Pay\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Net Pay\",\"name\":\"Net Pay\",\"editable\":false,\"compareValue\":null},{\"fieldname\":\"payroll_entry\",\"fieldtype\":\"Link\",\"label\":\"Payroll Entry\",\"insert_after_index\":32,\"link_field\":\"Salary Slip ID\",\"doctype\":\"Salary Slip\",\"options\":\"Payroll Entry\",\"width\":100,\"id\":\"payroll_entry\",\"name\":\"Payroll Entry\",\"editable\":false,\"compareValue\":null}]",
-  "letter_head": "Taazur Contracting",
+  "letter_head": "Taazur Contracting old",
   "modified": "2020-08-11 15:30:14.017368",
   "module": "HR",
   "name": "Salary Register1",
@@ -5278,6 +5278,246 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "HR to Accounts"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "is_standard": "No",
+  "javascript": null,
+  "json": "[{\"label\":\"Employee\",\"fieldname\":\"Employee\",\"fieldtype\":\"Link\",\"width\":120,\"options\":\"Employee\",\"id\":\"Employee\",\"name\":\"Employee\",\"editable\":false,\"compareValue\":null},{\"label\":\"Name\",\"fieldname\":\"Name\",\"fieldtype\":\"Data\",\"width\":200,\"id\":\"Name\",\"name\":\"Name\",\"editable\":false,\"compareValue\":null},{\"fieldname\":\"date_of_joining\",\"fieldtype\":\"Date\",\"label\":\"Date of Joining\",\"insert_after_index\":1,\"link_field\":\"Employee\",\"doctype\":\"Employee\",\"width\":100,\"id\":\"date_of_joining\",\"name\":\"Date of Joining\",\"editable\":false},{\"fieldname\":\"taa_med_class\",\"fieldtype\":\"Select\",\"label\":\"Med Class\",\"insert_after_index\":2,\"link_field\":\"Employee\",\"doctype\":\"Employee\",\"width\":100,\"id\":\"taa_med_class\",\"name\":\"Med Class\",\"editable\":false,\"compareValue\":null},{\"fieldname\":\"gender\",\"fieldtype\":\"Link\",\"label\":\"Gender\",\"insert_after_index\":3,\"link_field\":\"Employee\",\"doctype\":\"Employee\",\"options\":\"Gender\",\"width\":100,\"id\":\"gender\",\"name\":\"Gender\",\"editable\":false,\"compareValue\":null},{\"label\":\"Date of Birth\",\"fieldname\":\"Date of Birth\",\"fieldtype\":\"Date\",\"width\":100,\"id\":\"Date of Birth\",\"name\":\"Date of Birth\",\"editable\":false},{\"fieldname\":\"cell_number\",\"fieldtype\":\"Data\",\"label\":\"Mobile\",\"insert_after_index\":5,\"link_field\":\"Employee\",\"doctype\":\"Employee\",\"width\":100,\"id\":\"cell_number\",\"name\":\"Mobile\",\"editable\":false,\"compareValue\":null},{\"fieldname\":\"nationality\",\"fieldtype\":\"Select\",\"label\":\"Nationality\",\"insert_after_index\":6,\"link_field\":\"Employee\",\"doctype\":\"Employee\",\"width\":100,\"id\":\"nationality\",\"name\":\"Nationality\",\"editable\":false,\"compareValue\":null},{\"fieldname\":\"iqama_number\",\"fieldtype\":\"Data\",\"label\":\"Iqama Number\",\"insert_after_index\":7,\"link_field\":\"Employee\",\"doctype\":\"Employee\",\"width\":100,\"id\":\"iqama_number\",\"name\":\"Iqama Number\",\"editable\":false,\"compareValue\":null}]",
+  "letter_head": "Taazur Contracting old",
+  "modified": "2020-10-07 23:23:13.289554",
+  "module": "HR",
+  "name": "Details For Insurance",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Employee",
+  "reference_report": "Department Analytics",
+  "report_name": "Details For Insurance",
+  "report_script": null,
+  "report_type": "Custom Report",
+  "roles": [
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Fleet Manager"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Special Site Users"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Payroll Admin"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Managing Directors"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee Manager"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Read Only"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR to Accounts"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee Permissions"
+   },
+   {
+    "parent": "Details For Insurance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts User"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "is_standard": "No",
+  "javascript": null,
+  "json": "[{\"label\":\"Salary Slip ID\",\"fieldname\":\"Salary Slip ID\",\"fieldtype\":\"Link\",\"width\":150,\"options\":\"Salary Slip\",\"id\":\"Salary Slip ID\",\"name\":\"Salary Slip ID\",\"editable\":false,\"compareValue\":null},{\"fieldname\":\"payroll_entry\",\"fieldtype\":\"Link\",\"label\":\"Payroll Entry\",\"insert_after_index\":0,\"link_field\":\"Salary Slip ID\",\"doctype\":\"Salary Slip\",\"options\":\"Payroll Entry\",\"width\":100,\"id\":\"payroll_entry\",\"name\":\"Payroll Entry\",\"editable\":false,\"compareValue\":null},{\"label\":\"Employee\",\"fieldname\":\"Employee\",\"fieldtype\":\"Link\",\"width\":120,\"options\":\"Employee\",\"id\":\"Employee\",\"name\":\"Employee\",\"editable\":false,\"compareValue\":null},{\"label\":\"Employee Name\",\"fieldname\":\"Employee Name\",\"fieldtype\":\"\",\"width\":140,\"id\":\"Employee Name\",\"name\":\"Employee Name\",\"editable\":false,\"compareValue\":null},{\"label\":\"Date of Joining\",\"fieldname\":\"Date of Joining\",\"fieldtype\":\"\",\"width\":80,\"id\":\"Date of Joining\",\"name\":\"Date of Joining\",\"editable\":false,\"compareValue\":null},{\"label\":\"Branch\",\"fieldname\":\"Branch\",\"fieldtype\":\"Link\",\"width\":120,\"options\":\"Branch\",\"id\":\"Branch\",\"name\":\"Branch\",\"editable\":false,\"compareValue\":null},{\"label\":\"Department\",\"fieldname\":\"Department\",\"fieldtype\":\"Link\",\"width\":120,\"options\":\"Department\",\"id\":\"Department\",\"name\":\"Department\",\"editable\":false,\"compareValue\":null},{\"label\":\"Designation\",\"fieldname\":\"Designation\",\"fieldtype\":\"Link\",\"width\":-1,\"options\":\"Designation\",\"id\":\"Designation\",\"name\":\"Designation\",\"editable\":false,\"compareValue\":null},{\"label\":\"Company\",\"fieldname\":\"Company\",\"fieldtype\":\"Link\",\"width\":120,\"options\":\"Company\",\"id\":\"Company\",\"name\":\"Company\",\"editable\":false,\"compareValue\":null},{\"label\":\"Start Date\",\"fieldname\":\"Start Date\",\"fieldtype\":\"\",\"width\":80,\"id\":\"Start Date\",\"name\":\"Start Date\",\"editable\":false,\"compareValue\":null},{\"label\":\"End Date\",\"fieldname\":\"End Date\",\"fieldtype\":\"\",\"width\":80,\"id\":\"End Date\",\"name\":\"End Date\",\"editable\":false,\"compareValue\":null},{\"label\":\"Leave Without Pay\",\"fieldname\":\"Leave Without Pay\",\"fieldtype\":\"Float\",\"width\":-1,\"id\":\"Leave Without Pay\",\"name\":\"Leave Without Pay\",\"editable\":false,\"compareValue\":null},{\"label\":\"Payment Days\",\"fieldname\":\"Payment Days\",\"fieldtype\":\"Float\",\"width\":120,\"id\":\"Payment Days\",\"name\":\"Payment Days\",\"editable\":false,\"compareValue\":null},{\"label\":\"Housing Allowance\",\"fieldname\":\"Housing Allowance\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Housing Allowance\",\"name\":\"Housing Allowance\",\"editable\":false,\"compareValue\":null},{\"label\":\"Basic\",\"fieldname\":\"Basic\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Basic\",\"name\":\"Basic\",\"editable\":false,\"compareValue\":null},{\"label\":\"Transportation Allowance\",\"fieldname\":\"Transportation Allowance\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Transportation Allowance\",\"name\":\"Transportation Allowance\",\"editable\":false,\"compareValue\":null},{\"label\":\"Telephone Allowance\",\"fieldname\":\"Telephone Allowance\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Telephone Allowance\",\"name\":\"Telephone Allowance\",\"editable\":false,\"compareValue\":null},{\"label\":\"Other Allowance\",\"fieldname\":\"Other Allowance\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Other Allowance\",\"name\":\"Other Allowance\",\"editable\":false,\"compareValue\":null},{\"label\":\"Additional Salary\",\"fieldname\":\"Additional Salary\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Additional Salary\",\"name\":\"Additional Salary\",\"editable\":false,\"compareValue\":null},{\"label\":\"Food Allowance\",\"fieldname\":\"Food Allowance\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Food Allowance\",\"name\":\"Food Allowance\",\"editable\":false,\"compareValue\":null},{\"label\":\"Over Time\",\"fieldname\":\"Over Time\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Over Time\",\"name\":\"Over Time\",\"editable\":false,\"compareValue\":null},{\"label\":\"Incentive\",\"fieldname\":\"Incentive\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Incentive\",\"name\":\"Incentive\",\"editable\":false,\"compareValue\":null},{\"label\":\"Bonus\",\"fieldname\":\"Bonus\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Bonus\",\"name\":\"Bonus\",\"editable\":false,\"compareValue\":null},{\"label\":\"GOSI Pay\",\"fieldname\":\"GOSI Pay\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"GOSI Pay\",\"name\":\"GOSI Pay\",\"editable\":false,\"compareValue\":null},{\"label\":\"End of Service Settlement\",\"fieldname\":\"End of Service Settlement\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"End of Service Settlement\",\"name\":\"End of Service Settlement\",\"editable\":false,\"compareValue\":null},{\"label\":\"Food Allowance (Settlement)\",\"fieldname\":\"Food Allowance (Settlement)\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Food Allowance (Settlement)\",\"name\":\"Food Allowance (Settlement)\",\"editable\":false,\"compareValue\":null},{\"label\":\"Vacation Salary\",\"fieldname\":\"Vacation Salary\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Vacation Salary\",\"name\":\"Vacation Salary\",\"editable\":false,\"compareValue\":null},{\"label\":\"Gross Pay\",\"fieldname\":\"Gross Pay\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Gross Pay\",\"name\":\"Gross Pay\",\"editable\":false,\"compareValue\":null},{\"label\":\"Gosi\",\"fieldname\":\"Gosi\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Gosi\",\"name\":\"Gosi\",\"editable\":false,\"compareValue\":null},{\"label\":\"Other Deductions\",\"fieldname\":\"Other Deductions\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Other Deductions\",\"name\":\"Other Deductions\",\"editable\":false,\"compareValue\":null},{\"label\":\"Absent Deduction\",\"fieldname\":\"Absent Deduction\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Absent Deduction\",\"name\":\"Absent Deduction\",\"editable\":false,\"compareValue\":null},{\"label\":\"Late Deduction\",\"fieldname\":\"Late Deduction\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Late Deduction\",\"name\":\"Late Deduction\",\"editable\":false,\"compareValue\":null},{\"label\":\"Loan Repayment\",\"fieldname\":\"Loan Repayment\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Loan Repayment\",\"name\":\"Loan Repayment\",\"editable\":false,\"compareValue\":null},{\"label\":\"Total Deduction\",\"fieldname\":\"Total Deduction\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Total Deduction\",\"name\":\"Total Deduction\",\"editable\":false,\"compareValue\":null},{\"label\":\"Net Pay\",\"fieldname\":\"Net Pay\",\"fieldtype\":\"Currency\",\"width\":120,\"id\":\"Net Pay\",\"name\":\"Net Pay\",\"editable\":false,\"compareValue\":null}]",
+  "letter_head": "Taazur Contracting Logo",
+  "modified": "2020-10-13 14:40:22.101211",
+  "module": "HR",
+  "name": "Sales Register PE",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Salary Slip",
+  "reference_report": "Salary Register",
+  "report_name": "Sales Register PE",
+  "report_script": null,
+  "report_type": "Custom Report",
+  "roles": [
+   {
+    "parent": "Sales Register PE",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Sales Register PE",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee"
+   },
+   {
+    "parent": "Sales Register PE",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Sales Register PE",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Payroll Admin"
+   },
+   {
+    "parent": "Sales Register PE",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Managing Directors"
+   },
+   {
+    "parent": "Sales Register PE",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Secretary"
+   },
+   {
+    "parent": "Sales Register PE",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Read Only"
+   },
+   {
+    "parent": "Sales Register PE",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR to Accounts"
+   }
+  ]
+ },
+ {
+  "add_total_row": 1,
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Contracting Logo only",
+  "modified": "2020-11-02 14:38:35.122124",
+  "module": "HR",
+  "name": "Employee Salary Details",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": "SELECT\n\nA.employee as \"Employee:Data:100\",\nA.taa_branch as \"Branch:Data:120\",\nA.employee_name as \"Employee Name:Data:180\",\nA.base as \"Basic:Float:100\",\nA.ind_food_allowance as \"Food Allowance:Float:130\",\nA.ind_hra as \"HRA:Float:100\",\nA.ind_transport_allowance as \"Transport Allowance:Float:150\",\nA.ind_mobile_allowance as \"Mobile Allowance:Float:130\",\nA.ind_other_allowance as \"Other Allowance:Float:130\",\nA.ind_gross_salary as \"Gross Salary:Float:120\",\nA.from_date as \"From Date:Date:100\",\nA.name as \"ID:Link/Salary Structure Assignment:150\",\nB.status as \"Status:Data:100\"\n\nFROM\n`tabSalary Structure Assignment` AS A,\n`tabEmployee` AS B\n\nWHERE\nA.docstatus=1\n&& A.employee=B.name\n&&B.status=\"Active\"\n\nORDER BY A.employee,A.from_date DESC",
+  "ref_doctype": "Salary Structure Assignment",
+  "reference_report": null,
+  "report_name": "Employee Salary Details",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Employee Salary Details",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Employee Salary Details",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Employee Salary Details",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Employee Salary Details",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Payroll Admin"
+   },
+   {
+    "parent": "Employee Salary Details",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Managing Directors"
+   },
+   {
+    "parent": "Employee Salary Details",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Read Only"
    }
   ]
  },
@@ -7248,20 +7488,39 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2017-11-10 19:42:43.376658",
-  "module": "Education",
-  "name": "Student Monthly Attendance Sheet",
+  "modified": "2017-02-24 20:16:50.550242",
+  "module": "HR",
+  "name": "Monthly Attendance Sheet",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
   "prepared_report": 0,
   "query": null,
-  "ref_doctype": "Student Attendance",
+  "ref_doctype": "Attendance",
   "reference_report": null,
-  "report_name": "Student Monthly Attendance Sheet",
+  "report_name": "Monthly Attendance Sheet",
   "report_script": null,
   "report_type": "Script Report",
-  "roles": []
+  "roles": [
+   {
+    "parent": "Monthly Attendance Sheet",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Monthly Attendance Sheet",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Monthly Attendance Sheet",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   }
+  ]
  },
  {
   "add_total_row": 0,
@@ -7298,39 +7557,20 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2017-02-24 20:16:50.550242",
-  "module": "HR",
-  "name": "Monthly Attendance Sheet",
+  "modified": "2017-11-10 19:42:43.376658",
+  "module": "Education",
+  "name": "Student Monthly Attendance Sheet",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
   "prepared_report": 0,
   "query": null,
-  "ref_doctype": "Attendance",
+  "ref_doctype": "Student Attendance",
   "reference_report": null,
-  "report_name": "Monthly Attendance Sheet",
+  "report_name": "Student Monthly Attendance Sheet",
   "report_script": null,
   "report_type": "Script Report",
-  "roles": [
-   {
-    "parent": "Monthly Attendance Sheet",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "System Manager"
-   },
-   {
-    "parent": "Monthly Attendance Sheet",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "HR User"
-   },
-   {
-    "parent": "Monthly Attendance Sheet",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "HR Manager"
-   }
-  ]
+  "roles": []
  },
  {
   "add_total_row": 1,
