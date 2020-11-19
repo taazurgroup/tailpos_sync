@@ -102,14 +102,26 @@ doc_events = {
         "validate": "tailpos_sync.doc_events.item.validate",
         "before_save": "tailpos_sync.doc_events.item.before_save"
     },
-    "Sales Invoice": {
-        "validate": "tailpos_sync.doc_events.sales_invoice.validate",
-        "before_submit": "tailpos_sync.doc_events.sales_invoice.before_submit",
-        "after_submit": "tailpos_sync.doc_events.sales_invoice.after_submit",
-    },
-    "Payment Entry": {
-        "on_submit": "tailpos_sync.doc_events.payment_entry.on_submit",
-    },
+
+    "Additional Salary":
+    {
+        "validate": [
+
+                    "tailpos_sync.doc_events.additional_salary.validate_annual_leave_settlement",
+                    "tailpos_sync.doc_events.additional_salary.calculate_esb_settlement",
+                    "tailpos_sync.doc_events.additional_salary.calculate_overtime"
+
+                    ]
+    }
+
+#    "Sales Invoice": {
+#        "validate": "tailpos_sync.doc_events.sales_invoice.validate",
+#        "before_submit": "tailpos_sync.doc_events.sales_invoice.before_submit",
+#        "after_submit": "tailpos_sync.doc_events.sales_invoice.after_submit",
+#    },
+#    "Payment Entry": {
+#        "on_submit": "tailpos_sync.doc_events.payment_entry.on_submit",
+#    },
 #    "Loyalty Program": {
 #        "validate": "tailpos_sync.doc_events.loyalty_program.update_loyalty_programs",
 #    },

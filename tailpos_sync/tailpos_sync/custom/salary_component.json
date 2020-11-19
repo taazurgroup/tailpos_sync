@@ -173,6 +173,30 @@
   }
  ],
  "doctype": "Salary Component",
- "property_setters": [],
+ "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2020-11-19 23:23:01.563876",
+   "default_value": null,
+   "doc_type": "Salary Component",
+   "docstatus": 0,
+   "doctype_or_field": "DocType",
+   "field_name": null,
+   "idx": 0,
+   "modified": "2020-11-19 23:23:01.563876",
+   "modified_by": "Administrator",
+   "name": "Salary Component-title_field",
+   "owner": "Administrator",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "title_field",
+   "property_type": "Data",
+   "value": ""
+  }
+ ],
  "sync_on_migrate": 1
 }
