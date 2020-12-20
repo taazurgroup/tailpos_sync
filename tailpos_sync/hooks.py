@@ -108,7 +108,7 @@ doc_events = {
         "validate": [
 
                     "tailpos_sync.doc_events.additional_salary.validate_annual_leave_settlement",
-                    "tailpos_sync.doc_events.additional_salary.calculate_esb_settlement",
+#                    "tailpos_sync.doc_events.additional_salary.calculate_esb_settlement",
                     "tailpos_sync.doc_events.additional_salary.calculate_overtime"
 
                     ]

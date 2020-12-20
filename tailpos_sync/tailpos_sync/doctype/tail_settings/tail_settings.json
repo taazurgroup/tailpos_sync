@@ -29,7 +29,15 @@
   "company_footer",
   "column_break_24",
   "company_headerwith_arabic",
-  "company_footerwith_arabic"
+  "company_footerwith_arabic",
+  "section_break_27",
+  "ind_taazur_registration_expiry1",
+  "ind_taazur_registration_expiry2",
+  "column_break_30",
+  "ind_hos_registration_expiry1",
+  "ind_hos_registration_expiry2",
+  "column_break_33",
+  "ind_transportation_registration_expiry1"
  ],
  "fields": [
   {
@@ -177,11 +185,49 @@
    "fieldname": "company_footerwith_arabic",
    "fieldtype": "Text",
    "label": "Company Footer(with Arabic)"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break",
+   "label": "Company Registration Details"
+  },
+  {
+   "fieldname": "ind_taazur_registration_expiry1",
+   "fieldtype": "Date",
+   "label": "Taazur Registration Expiry1"
+  },
+  {
+   "fieldname": "ind_taazur_registration_expiry2",
+   "fieldtype": "Date",
+   "label": "Taazur Registration Expiry2"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ind_hos_registration_expiry1",
+   "fieldtype": "Date",
+   "label": "HOS Registration Expiry1"
+  },
+  {
+   "fieldname": "ind_hos_registration_expiry2",
+   "fieldtype": "Date",
+   "label": "HOS Registration Expiry2"
+  },
+  {
+   "fieldname": "ind_transportation_registration_expiry1",
+   "fieldtype": "Date",
+   "label": "Transportation Registration Expiry1"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
   }
  ],
  "issingle": 1,
- "modified": "2020-04-24 20:46:38.999719",
- "modified_by": "Administrator",
+ "modified": "2020-11-21 22:02:41.233800",
+ "modified_by": "santosh@taazur.com",
  "module": "TailPOS Sync",
  "name": "Tail Settings",
  "owner": "Administrator",

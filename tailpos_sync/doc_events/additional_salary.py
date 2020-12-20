@@ -11,19 +11,19 @@ def validate_annual_leave_settlement(self,method):
     if self.salary_component=="Annual Leave settlement":
         if (not self.ind_last_settlement_date or not self.ind_settlement_date or not self.ind_ssa):
             frappe.throw(_("Select SSA, Settlement Date, Last Settlement Date"))
-        self.overwrite_salary_structure_amount=1
+#        self.overwrite_salary_structure_amount=1
         self.ind_service_period=date_diff(self.ind_settlement_date,self.ind_last_settlement_date)
-        self.ind_service_years=self.ind_service_period/360
+        self.ind_service_years=self.ind_service_period/365
 
-        self.amount=(self.ind_basic_salary+self.ind_hra)*self.ind_service_period/360*(self.ind_annual_earned_days/30)
-        last_ssa = frappe.get_list("Salary Structure Assignment",
-    	    fields=["from_date", "employee","name"],
-		    filters = {
-		        "employee": self.employee,
-                "name": ("<=",self.ind_ssa),
-		        "name": ("!=", self.name)
-            })
-#        self.ind_salary_structure_assignment=last_ssa[0].name
+        self.amount=(self.ind_basic_salary+self.ind_hra)*self.ind_service_period/365*(self.ind_annual_earned_days/30)
+#        last_ssa = frappe.get_list("Salary Structure Assignment",
+#    	    fields=["from_date", "employee","name"],
+#		    filters = {
+#		        "employee": self.employee,
+#                        "name": ("<=",self.ind_ssa),
+#		        "name": ("!=", self.name)
+#            })
+#        self.ind_ssa=last_ssa[0].name
 
 
 @frappe.whitelist(allow_guest=True)
@@ -31,7 +31,7 @@ def calculate_esb_settlement(self,method):
     if self.salary_component=="End of Service Benefits":
         self.overwrite_salary_structure_amount=1
         self.ind_service_period=date_diff(self.ind_settlement_date,self.ind_joining_date)
-        self.ind_service_years=self.ind_service_period/360
+        self.ind_service_years=self.ind_service_period/365
         if (not self.ind_settlement_date or not self.ind_reason_for_esb_settlement):
             frappe.throw(_("Please select, Settlement Date and Reason for ESB Settlement"))
 
