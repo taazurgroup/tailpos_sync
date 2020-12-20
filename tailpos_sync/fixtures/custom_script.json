@@ -14,7 +14,7 @@
   "docstatus": 0,
   "doctype": "Custom Script",
   "dt": "Loan",
-  "modified": "2020-05-28 13:35:39.294739",
+  "modified": "2020-12-13 10:53:35.739496",
   "name": "Loan-Client",
   "parent": null,
   "parentfield": null,
@@ -31,17 +31,6 @@
   "parentfield": null,
   "parenttype": null,
   "script": "frappe.ui.form.on('Salary Structure Assignment',  {\n    refresh: function(frm) {\n\t\t// your code here\n\t\tfrm.doc.ind_gross_salary=frm.doc.base+frm.doc.ind_food_allowance+frm.doc.ind_hra+frm.doc.ind_transport_allowance+frm.doc.ind_mobile_allowance+frm.doc.ind_other_allowance;\n\t\tfrm.doc.ind_maximum_monthly_deduction=frm.doc.base*0.40;\n\t}\n});\n"
- },
- {
-  "docstatus": 0,
-  "doctype": "Custom Script",
-  "dt": "Additional Salary",
-  "modified": "2020-03-29 13:45:52.641042",
-  "name": "Additional Salary-Client",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "script": "frappe.ui.form.on('Additional Salary', {\n\tsetup(frm) {\n\t\t// your code here\n\t\tcur_frm.set_query(\"ind_ssa\", function(doc) {\n\t\t    return {\n\t\t        filters: {\n\t\t            \"employee\": cur_frm.doc.employee\n\t\t        }\n\t\t    };\n\t\t}\n\t\t);\n\t\t\n\t},\n\temployee(frm){\n\t\t    //this will fetch and set the most recent assignment.\n        frappe.db.get_link_options('Salary Structure Assignment', '',\n            {\n\t\t\t\temployee: cur_frm.doc.employee\n\t\t\t}\n\t\t).then(all_ssa =>{\n\t\t    frm.set_value(\"ind_ssa\", all_ssa[0].value);\n\t\t});\n\t},\n\t\n\tvalidate(frm){\n\t    if(frm.doc.salary_component==\"Over Time\"){\n\t        frm.doc.ind_basic_salary_per_hour=frm.doc.ind_basic_salary/240;\n\t        frm.doc.amount=frm.doc.ind_overtime_hours*frm.doc.ind_overtime_rate_per_hour*frm.doc.ind_basic_salary_per_hour;\n\t    }\n\t}\n\t\n}\n\n\n\n);\n"
  },
  {
   "docstatus": 0,
@@ -108,5 +97,27 @@
   "parentfield": null,
   "parenttype": null,
   "script": "frappe.ui.form.on('Goods Delivery',  {\n    validate: function(frm) {\n        $.each(frm.doc.order_details,  function(i,  d) {\n            d.amount = d.qty * d.rate;\n        });\n    } \n})"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Additional Salary",
+  "modified": "2020-11-21 15:10:08.757000",
+  "name": "Additional Salary-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "//-------------------------------------------------------------\nfrappe.ui.form.on('Additional Salary', {\n\tsetup(frm) {\n\t\t// your code here\n\t\tcur_frm.set_query(\"ind_ssa\", function(doc) {\n\t\t    return {\n\t\t        filters: {\n\t\t            \"employee\": cur_frm.doc.employee\n//\t\t            \"from_date\": 01-04-2020\n\t\t        }\n\t\t    };\n\t\t}\n\t\t);\n\t\t\n\t},\n\temployee(frm){\n\t\t    //this will fetch and set the most recent assignment.\n        frappe.db.get_link_options('Salary Structure Assignment', '',\n            {\n\t\t\t\temployee: cur_frm.doc.employee\n\t\t\t}\n\t\t).then(all_ssa =>{\n\t\t    frm.set_value(\"ind_ssa\", all_ssa[0].value);\n\t\t});\n\t}\t\n\t\n});\n"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Payment Request",
+  "modified": "2020-12-07 12:14:57.738580",
+  "name": "Payment Request-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Payment Request', {\n\trefresh(frm) {\n\t\t// your code here\n\t    cur_frm.fields_dict['department'].get_query = function(doc) {\n\t        return {\n\t            filters: {\n\t                \"is_group\": '0',\n\t                \"disabled\":\"0\"\n\t            }\n\t        }\n\t        \n\t    }\n\n\t}\n})"
  }
 ]

@@ -13,7 +13,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<div><span style=\"color: rgb(64, 64, 64);\">\u0634\u0640\u0640\u0640\u0640\u0640\u0631\u0643\u0640\u0640\u0640\u0640\u0640\u0629 \u0628\u0640\u0640\u064a\u0640\u0640\u0640\u0640\u062a \u0627\u0644\u062a\u0640\u0640\u0640\u0640\u0640\u0648\u0627\u0628\u0640\u0640\u0640\u0640\u0640\u0644 \u0627\u0644\u0640\u0640\u0645\u0640\u0640\u0640\u0640\u0640\u0640\u062d\u0640\u0640\u062f\u0648\u062f\u0629\u00a0</span></div><div><span style=\"color: rgb(64, 64, 64);\">\ufeffThe house of Spices Company Limited</span></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div>",
@@ -29,7 +29,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<div><img src=\"/files/6TCfI0B.png\"></div>",
@@ -45,10 +45,10 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
-  "content": "<style> \n        .x { \n            -moz-column-count: 1; \n            column-count: 1; \n            width: 100%; \n        }\n</style>\n    <div class=\"x\"> \n    <pre style=\"background-color: #FDFEFE; width: 100%;\"><b style=\"width: 100%; text-align: center; font-size: 18px;\"><img src=\"/files/LogoTaazurJordan.png\" style=\"width: 150px;\">{{doc.company}}</b><br><font style=\"width: 100%; text-align: centre; font-size: 11px;\">P.O.Box: 120, Ras Tanurah 31941, Kingdom of Saudi Arabia,<br>Website:www.taazur..com, Email:info@taazur.com,Telephone: +966-13-8021801</font>\n</pre></div>",
+  "content": "<img src=\"/files/Taazur_Jordan.png\" style=\"width: 100%;\">",
   "disabled": 1,
   "docstatus": 0,
   "doctype": "Letter Head",
@@ -61,7 +61,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<style> \n        .x { \n            -moz-column-count: 1; \n            column-count: 1; \n            width: 100%; \n        }\n</style>\n    <div class=\"x\"> \n    <pre style=\"background-color: #FDFEFE; width: 100%;\"><b style=\"width: 100%; text-align: center; font-size: 18px;\"><img src=\"/files/HNsNBBQ.png\" style=\"width: 100px;\">{{doc.company}}</b><br><font style=\"width: 100%; text-align: centre; font-size: 11px;\">P.O.Box: 120, Ras Tanurah 31941, Kingdom of Saudi Arabia,<br>Website:www.taazur..com, Email:info@taazur.com,Telephone: +966-13-8021801&gt;\n</font></pre></div>",
@@ -77,7 +77,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<img src=\"/files/Taazur General Logo.jpg\" style=\"width: 100%;\">",
@@ -96,7 +96,7 @@
   "source": "Image"
  },
  {
-  "content": "<style> \n        .x { \n            -moz-column-count: 1; \n            column-count: 1; \n            width: 100%; \n        }\n</style>\n    <div class=\"x\"> \n    <pre style=\"background-color: #FDFEFE; width: 100%;\"><b style=\"width: 100%; text-align: center; font-size: 18px;\"><img src=\"/files/LogoTaazurContracting.png\" style=\"width: 150px;\">{{doc.company}}<img src=\"/files/LogoERPNext.png\" style=\"width: 150px;\"></b><br><font style=\"width: 100%; text-align: centre; font-size: 11px;\">P.O.Box: 120, Ras Tanurah 31941, Kingdom of Saudi Arabia,<br>Website:www.taazur..com, Email:info@taazur.com,Telephone: +966-13-8021801</font>\n</pre></div>",
+  "content": "<img src=\"/files/lo.png\" style=\"width: 100%;\">",
   "disabled": 1,
   "docstatus": 0,
   "doctype": "Letter Head",
@@ -109,7 +109,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<img src=\"/files/lo1.png\" style=\"width: 100%;\">",
@@ -128,7 +128,7 @@
   "source": "Image"
  },
  {
-  "content": "<style> \n        .x { \n            -moz-column-count: 1; \n            column-count: 1; \n            width: 100%; \n        }\n</style>\n    <div class=\"x\"> \n    <pre style=\"background-color: #FDFEFE; width: 100%;\"><b style=\"width: 100%; text-align: center; font-size: 18px;\"><img src=\"/files/LogoTaazurTransportation.png\" style=\"width: 150px;\">Taazur Transportation Company Limited</b><br><font style=\"width: 100%; text-align: centre; font-size: 11px;\">P.O.Box: 120, Ras Tanurah 31941, Kingdom of Saudi Arabia,<br>Website:www.taazur..com, Email:info@taazur.com,Telephone: +966-13-8021801</font>\n</pre></div>",
+  "content": "<img src=\"/files/Taazur_Transportation.png\" style=\"width: 100%;\">",
   "disabled": 1,
   "docstatus": 0,
   "doctype": "Letter Head",
@@ -141,7 +141,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<style> \n        .x { \n            -moz-column-count: 1; \n            column-count: 1; \n            width: 100%; \n        }\n</style>\n    <div class=\"x\"> \n    <pre style=\"background-color: #FDFEFE; width: 100%;\"><b style=\"width: 100%; text-align: center; font-size: 18px;\"><img src=\"/files/LogoHOS.png\" style=\"width: 150px;\">THE HOUSE OF SPICES COMPANY LIMITED</b><br><font style=\"width: 100%; text-align: centre; font-size: 11px;\">P.O.Box: 120, Ras Tanurah 31941, Kingdom of Saudi Arabia,<br>Website:www.taazur..com, Email:info@taazur.com,Telephone: +966-13-8021801</font>\n</pre></div>",
@@ -157,7 +157,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<br>\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 100%; text-align: right; font-size: 20px;\">Taazur Tansportation  <br> \u062a\u0639\u0632\u064a\u0631 \u0644\u0644\u0646\u0642\u0644\u064a\u0627\u062a </td>\n</tr></tbody>\n</table>\n\n<br>\n\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 50%; text-align: left;\"><u><b>Address:</b></u><br>P.O.Box: 120, Ras Tanurah 31941,<br>Kingdom of Saudi Arabia<br>Our VAT:\t300521384900003</td>\n<td style=\"width: 50%; text-align: right;\"><u><b>:\u0627\u0644\u0639\u0646\u0648\u0627\u0646</b></u>\n<br>\n\n\u0635.\u0628 120 \u060c \u0631\u0623\u0633 \u062a\u0646\u0648\u0631\u0629 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629 \u060c 31941 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\n<br>300521384900003\t:\u0631\u0642\u0645\u0646\u0627 \u0627\u0644\u0636\u0631\u064a\u0628\u064a\n</td>\n</tr></tbody>\n</table>",
@@ -173,7 +173,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "\n<br>\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 100%; text-align: right; font-size: 20px;\">Future Equipments Trading Company <br> \u0634\u0631\u0643\u0629 \u0645\u0639\u062f\u0627\u062a \u0627\u0644\u0645\u0633\u062a\u0642\u0628\u0644 \u0627\u0644\u062a\u062c\u0627\u0631\u064a\u0629 </td>\n</tr></tbody>\n</table>\n\n<br>\n\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 50%; text-align: left;\"><u><b>Address:</b></u><br>P.O.Box: 120, Ras Tanurah 31941,<br>Kingdom of Saudi Arabia<br>Our VAT:\t300521384900003</td>\n<td style=\"width: 50%; text-align: right;\"><u><b> :\u0627\u0644\u0639\u0646\u0648\u0627\u0646 </b></u>\n<br>\n\n\u0635.\u0628 120 \u060c \u0631\u0623\u0633 \u062a\u0646\u0648\u0631\u0629 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629 \u060c 31941 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\n<br>300521384900003\t:\u0631\u0642\u0645\u0646\u0627 \u0627\u0644\u0636\u0631\u064a\u0628\u064a\n</td>\n</tr></tbody>\n</table>",
@@ -189,7 +189,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 30%; text-align: left;\"><img src=\"/files/LogoHOS.png\" style=\"width: 150px;\"></td>\n<td style=\"width: 70%; text-align: right; font-size: 18px;\"><br><b>The House Of Spices Company Limited <br> \u0634\u0640\u0640\u0640\u0640\u0640\u0631\u0643\u0640\u0640\u0640\u0640\u0640\u0629 \u0628\u0640\u0640\u064a\u0640\u0640\u0640\u0640\u062a \u0627\u0644\u062a\u0640\u0640\u0640\u0640\u0640\u0648\u0627\u0628\u0640\u0640\u0640\u0640\u0640\u0644 \u0627\u0644\u0640\u0640\u0645\u0640\u0640\u0640\u0640\u0640\u0640\u062d\u0640\u0640\u062f\u0648\u062f\u0629 </b>\n</td></tr>\n</tbody>\n</table>\n\n<br>\n\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 50%; text-align: left;\"><u><b>Address:</b></u><br>P.O.Box: 120, Ras Tanurah 31941,<br>Kingdom of Saudi Arabia<br>Our VAT:\t302006877700003</td>\n<td style=\"width: 50%; text-align: right;\"><u><b>:\u0627\u0644\u0639\u0646\u0648\u0627\u0646</b></u>\n<br>\n\n\u0635.\u0628 120 \u060c \u0631\u0623\u0633 \u062a\u0646\u0648\u0631\u0629 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629 \u060c 31941 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\n<br>302006877700003\t:\u0631\u0642\u0645\u0646\u0627 \u0627\u0644\u0636\u0631\u064a\u0628\u064a\n</td>\n</tr></tbody>\n</table>\n\n",
@@ -205,18 +205,18 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 30%; text-align: left;\"><img src=\"/files/LogoTaazurContracting.png\" style=\"width: 100px;\"></td>\n<td style=\"width: 100%; text-align: right; font-size: 20px;\">Taazur General Contracting Company Limited <br>\u0634\u0631\u0643\u0629 \u062a\u0622\u0632\u0631 \u0644\u0644\u0645\u0642\u0627\u0648\u0644\u0627\u062a \u0627\u0644\u0639\u0627\u0645\u0629 \u0627\u0644\u0645\u062d\u062f\u0648\u062f\u0629 </td>\n</tr></tbody>\n</table>\n\n<br>\n\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 50%; text-align: left;\"><u><b>Address:</b></u><br>P.O.Box: 120, Ras Tanurah 31941,<br>Kingdom of Saudi Arabia<br>Our VAT:\t300521384900003</td>\n<td style=\"width: 50%; text-align: right;\"><u><b>:\u0627\u0644\u0639\u0646\u0648\u0627\u0646</b></u>\n<br>\n\n\u0635.\u0628 120 \u060c \u0631\u0623\u0633 \u062a\u0646\u0648\u0631\u0629 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629 \u060c 31941 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\n<br>300521384900003\t:\u0631\u0642\u0645\u0646\u0627 \u0627\u0644\u0636\u0631\u064a\u0628\u064a\n</td>\n</tr></tbody>\n</table>",
-  "disabled": 1,
+  "disabled": 0,
   "docstatus": 0,
   "doctype": "Letter Head",
   "footer": "",
   "image": null,
   "is_default": 0,
   "letter_head_name": "Taazur Contracting Logo",
-  "modified": "2020-10-13 23:19:06.331175",
+  "modified": "2020-11-17 16:57:15.380613",
   "name": "Taazur Contracting Logo",
   "parent": null,
   "parentfield": null,
@@ -237,7 +237,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<br>\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 30%; text-align: left;\"><img src=\"/files/LogoFutureEquipments.png\" style=\"width: 100px;\"></td>\n<td style=\"width: 100%; text-align: right; font-size: 20px;\">Future Equipments Trading Company <br> \u0634\u0631\u0643\u0629 \u0645\u0639\u062f\u0627\u062a \u0627\u0644\u0645\u0633\u062a\u0642\u0628\u0644 \u0627\u0644\u062a\u062c\u0627\u0631\u064a\u0629 </td>\n</tr></tbody>\n</table>\n\n<br>\n\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 50%; text-align: left;\"><u><b>Address:</b></u><br>P.O.Box: 120, Ras Tanurah 31941,<br>Kingdom of Saudi Arabia<br>Our VAT:\t300521384900003</td>\n<td style=\"width: 50%; text-align: right;\"><u><b> :\u0627\u0644\u0639\u0646\u0648\u0627\u0646 </b></u>\n<br>\n\n\u0635.\u0628 120 \u060c \u0631\u0623\u0633 \u062a\u0646\u0648\u0631\u0629 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629 \u060c 31941 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\n<br>300521384900003\t:\u0631\u0642\u0645\u0646\u0627 \u0627\u0644\u0636\u0631\u064a\u0628\u064a\n</td>\n</tr></tbody>\n</table>",
@@ -253,18 +253,18 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 30%; text-align: left;\"><img src=\"/files/LogoTaazurTransportation.png\" style=\"width: 100px;\"></td>\n<td style=\"width: 100%; text-align: right; font-size: 20px;\"></td>\n</tr></tbody>\n</table>",
   "disabled": 0,
   "docstatus": 0,
   "doctype": "Letter Head",
-  "footer": "<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 100%; text-align: left;\"><img src=\"/files/Footer Transportation.png\" style=\"width: 100px;\"></td>\n</tr></tbody>\n</table>",
+  "footer": "<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 100%; text-align: left;\"><img src=\"/files/transportation footer.png\" style=\"width: 100%;\"></td>\n</tr></tbody>\n</table>",
   "image": null,
   "is_default": 0,
   "letter_head_name": "Transportation Logo Only",
-  "modified": "2020-10-14 18:27:25.182489",
+  "modified": "2020-11-17 14:23:31.622095",
   "name": "Transportation Logo Only",
   "parent": null,
   "parentfield": null,
@@ -285,7 +285,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<br>\n<br>\n<br>\n<br>",
@@ -301,7 +301,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 30%; text-align: left;\"><img src=\"/files/LogoTaazurContracting.png\" style=\"width: 100px;\"></td>\n<td style=\"width: 100%; text-align: right; font-size: 20px;\"></td>\n</tr></tbody>\n</table>",
@@ -317,7 +317,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<br>\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 100%; text-align: right; font-size: 20px;\">Taazur General Contracting Company Limited <br>\u0634\u0631\u0643\u0629 \u062a\u0622\u0632\u0631 \u0644\u0644\u0645\u0642\u0627\u0648\u0644\u0627\u062a \u0627\u0644\u0639\u0627\u0645\u0629 \u0627\u0644\u0645\u062d\u062f\u0648\u062f\u0629 </td>\n</tr></tbody>\n</table>\n\n<br>\n\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 50%; text-align: left;\"><u><b>Address:</b></u><br>P.O.Box: 120, Ras Tanurah 31941,<br>Kingdom of Saudi Arabia<br>Our VAT:\t300521384900003</td>\n<td style=\"width: 50%; text-align: right;\"><u><b>:\u0627\u0644\u0639\u0646\u0648\u0627\u0646</b></u>\n<br>\n\n\u0635.\u0628 120 \u060c \u0631\u0623\u0633 \u062a\u0646\u0648\u0631\u0629 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629 \u060c 31941 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\n<br>300521384900003\t:\u0631\u0642\u0645\u0646\u0627 \u0627\u0644\u0636\u0631\u064a\u0628\u064a\n</td>\n</tr></tbody>\n</table>",
@@ -333,23 +333,7 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
- },
- {
-  "content": "<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 30%; text-align: left;\"><img src=\"/files/LogoTaazurContracting.png\" style=\"width: 100px;\"></td>\n<td style=\"width: 100%; text-align: right; font-size: 20px;\"></td>\n</tr></tbody>\n</table>",
-  "disabled": 0,
-  "docstatus": 0,
-  "doctype": "Letter Head",
-  "footer": "<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 100%; text-align: left;\"><img src=\"/files/Footer Contracting.png\" style=\"width: 100%;\"></td>\n</tr></tbody>\n</table>",
-  "image": null,
-  "is_default": 1,
-  "letter_head_name": "Contracting Logo only",
-  "modified": "2020-10-26 14:40:10.570930",
-  "name": "Contracting Logo only",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
   "content": "<div><img src=\"/files/kOIYBAH.png\"></div>",
@@ -362,6 +346,22 @@
   "letter_head_name": "Taazur Egypt",
   "modified": "2020-10-08 00:40:12.499282",
   "name": "Taazur Egypt",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "source": "Image"
+ },
+ {
+  "content": "\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 30%; text-align: left;\"><img src=\"/files/LogoTaazurContracting.png\" style=\"width: 100px;\"></td>\n<td style=\"width: 100%; text-align: right; font-size: 20px;\">Taazur General Contracting Company Limited <br>\u0634\u0631\u0643\u0629 \u062a\u0622\u0632\u0631 \u0644\u0644\u0645\u0642\u0627\u0648\u0644\u0627\u062a \u0627\u0644\u0639\u0627\u0645\u0629 \u0627\u0644\u0645\u062d\u062f\u0648\u062f\u0629 </td>\n</tr></tbody>\n</table>\n\n<br>\n\n<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 50%; text-align: left;\"><u><b>Address:</b></u><br>P.O.Box: 120, Ras Tanurah 31941,<br>Kingdom of Saudi Arabia<br>Our VAT:\t300521384900003</td>\n<td style=\"width: 50%; text-align: right;\"><u><b>:\u0627\u0644\u0639\u0646\u0648\u0627\u0646</b></u>\n<br>\n\n\u0635.\u0628 120 \u060c \u0631\u0623\u0633 \u062a\u0646\u0648\u0631\u0629 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629 \u060c 31941 \u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629\n<br>300521384900003\t:\u0631\u0642\u0645\u0646\u0627 \u0627\u0644\u0636\u0631\u064a\u0628\u064a\n</td>\n</tr></tbody>\n</table>",
+  "disabled": 1,
+  "docstatus": 0,
+  "doctype": "Letter Head",
+  "footer": "<div><img src=\"/files/HL6h35x.png\"></div>",
+  "image": null,
+  "is_default": 0,
+  "letter_head_name": "VAT",
+  "modified": "2020-11-24 11:18:13.839594",
+  "name": "VAT",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
@@ -381,22 +381,22 @@
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  },
  {
-  "content": "<div><img src=\"/files/Logo taazur.png\"></div>\n<img height=\"60\" src=\"/files/Logo taazur.png\" width=\"150\">",
-  "disabled": 1,
+  "content": "<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 30%; text-align: left;\"><img src=\"/files/LogoTaazurContracting.png\" style=\"width: 100px;\"></td>\n<td style=\"width: 100%; text-align: right; font-size: 20px;\"></td>\n</tr></tbody>\n</table>",
+  "disabled": 0,
   "docstatus": 0,
   "doctype": "Letter Head",
-  "footer": "<div><img src=\"/files/HL6h35x.png\"></div>",
+  "footer": "<table style=\"width: 100%;\"><tbody>\n<tr>\n<td style=\"width: 100%; text-align: left;\"><img src=\"/files/Footer Contracting.png\" style=\"width: 100%;\"></td>\n</tr></tbody>\n</table>",
   "image": null,
-  "is_default": 0,
-  "letter_head_name": "VAT",
-  "modified": "2020-10-08 00:24:53.579788",
-  "name": "VAT",
+  "is_default": 1,
+  "letter_head_name": "Contracting Logo only",
+  "modified": "2020-10-26 14:40:10.570930",
+  "name": "Contracting Logo only",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "source": "HTML"
+  "source": "Image"
  }
 ]

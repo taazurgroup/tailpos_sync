@@ -1303,7 +1303,7 @@
   "doctype": "Workflow",
   "document_type": "Expense Claim",
   "is_active": 1,
-  "modified": "2020-08-18 10:09:50.223800",
+  "modified": "2020-11-24 09:22:09.283838",
   "name": "Expense Claim=EA-MainA-AM",
   "override_status": 1,
   "parent": null,
