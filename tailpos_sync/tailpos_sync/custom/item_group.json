@@ -32,7 +32,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Item Group\", \"Cost Center\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -66,7 +66,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Item Group\", \"Cost Center\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -100,7 +100,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Item Group\", \"Cost Center\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -168,7 +168,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Item Group\", \"Cost Center\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -202,7 +202,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Cost Center\",\"Item Group\"]",
+   "user_permission_doctypes": null,
    "write": 1
   },
   {

@@ -404,7 +404,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\", \"Customer\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -438,7 +438,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 1,
-   "user_permission_doctypes": "[\"Price List\", \"Company\", \"Letter Head\"]",
+   "user_permission_doctypes": null,
    "write": 1
   },
   {
@@ -506,7 +506,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 1,
-   "user_permission_doctypes": "[\"Price List\", \"Company\", \"Letter Head\"]",
+   "user_permission_doctypes": null,
    "write": 1
   },
   {
@@ -721,17 +721,17 @@
    "_comments": null,
    "_liked_by": null,
    "_user_tags": null,
-   "creation": "2020-10-26 11:48:20.241897",
+   "creation": "2020-11-15 10:37:09.446643",
    "default_value": null,
    "doc_type": "Purchase Order",
    "docstatus": 0,
    "doctype_or_field": "DocField",
    "field_name": "scan_barcode",
    "idx": 0,
-   "modified": "2020-10-26 11:48:20.241897",
-   "modified_by": "santosh@taazur.com",
+   "modified": "2020-11-15 10:37:09.446643",
+   "modified_by": "Administrator",
    "name": "Purchase Order-scan_barcode-hidden",
-   "owner": "santosh@taazur.com",
+   "owner": "Administrator",
    "parent": null,
    "parentfield": null,
    "parenttype": null,

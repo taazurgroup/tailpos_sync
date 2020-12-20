@@ -722,7 +722,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\", \"Customer Group\", \"Sales Taxes and Charges Template\", \"Price List\", \"Territory\", \"Letter Head\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -756,7 +756,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\", \"Customer Group\", \"Customer\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -824,7 +824,7 @@
    "set_user_permissions": 1,
    "share": 1,
    "submit": 1,
-   "user_permission_doctypes": "[\"Company\"]",
+   "user_permission_doctypes": null,
    "write": 1
   },
   {
@@ -858,7 +858,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 1,
-   "user_permission_doctypes": "[\"Company\"]",
+   "user_permission_doctypes": null,
    "write": 1
   },
   {
@@ -892,7 +892,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 1,
-   "user_permission_doctypes": "[\"Company\", \"Customer Group\", \"Territory\", \"Letter Head\"]",
+   "user_permission_doctypes": null,
    "write": 1
   }
  ],
@@ -903,17 +903,17 @@
    "_comments": null,
    "_liked_by": null,
    "_user_tags": null,
-   "creation": "2020-10-26 11:48:21.314688",
+   "creation": "2020-11-15 10:37:08.779292",
    "default_value": null,
    "doc_type": "Sales Order",
    "docstatus": 0,
    "doctype_or_field": "DocField",
    "field_name": "scan_barcode",
    "idx": 0,
-   "modified": "2020-10-26 11:48:21.314688",
-   "modified_by": "santosh@taazur.com",
+   "modified": "2020-11-15 10:37:08.779292",
+   "modified_by": "Administrator",
    "name": "Sales Order-scan_barcode-hidden",
-   "owner": "santosh@taazur.com",
+   "owner": "Administrator",
    "parent": null,
    "parentfield": null,
    "parenttype": null,

@@ -347,7 +347,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 1,
-   "user_permission_doctypes": "[\"Company\"]",
+   "user_permission_doctypes": null,
    "write": 1
   },
   {
@@ -381,7 +381,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 1,
-   "user_permission_doctypes": "[\"Company\"]",
+   "user_permission_doctypes": null,
    "write": 1
   },
   {
@@ -415,7 +415,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 1,
-   "user_permission_doctypes": "[\"Company\"]",
+   "user_permission_doctypes": null,
    "write": 1
   },
   {
@@ -483,7 +483,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 1,
-   "user_permission_doctypes": "[\"Company\", \"Customer Group\", \"Territory\", \"Letter Head\"]",
+   "user_permission_doctypes": null,
    "write": 1
   },
   {

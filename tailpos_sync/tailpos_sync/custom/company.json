@@ -1888,7 +1888,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -1922,7 +1922,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\", \"Cost Center\", \"Letter Head\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -1956,7 +1956,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\", \"Cost Center\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -1990,7 +1990,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\", \"Cost Center\", \"Letter Head\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -2024,7 +2024,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\", \"Letter Head\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -2058,7 +2058,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\"]",
+   "user_permission_doctypes": null,
    "write": 1
   },
   {
@@ -2092,7 +2092,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Account\", \"Company\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -2126,7 +2126,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\", \"Letter Head\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -2160,7 +2160,7 @@
    "set_user_permissions": 0,
    "share": 1,
    "submit": 0,
-   "user_permission_doctypes": "[\"Account\", \"Company\", \"Cost Center\", \"Letter Head\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
@@ -2194,7 +2194,7 @@
    "set_user_permissions": 0,
    "share": 0,
    "submit": 0,
-   "user_permission_doctypes": "[\"Company\"]",
+   "user_permission_doctypes": null,
    "write": 0
   },
   {
