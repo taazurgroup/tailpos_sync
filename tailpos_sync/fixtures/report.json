@@ -9378,5 +9378,135 @@
     "role": "Leave Allocation Create"
    }
   ]
+ },
+ {
+  "add_total_row": 0,
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Contracting Logo only",
+  "modified": "2020-12-29 18:24:04.631930",
+  "module": "TailPOS Sync",
+  "name": "Budget Statement",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Budget",
+  "reference_report": null,
+  "report_name": "Budget Statement",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Budget Statement",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Budget Statement",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Budget Statement",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ]
+ },
+ {
+  "add_total_row": 1,
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "is_standard": "Yes",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Contracting Logo only",
+  "modified": "2020-12-29 18:25:25.840905",
+  "module": "TailPOS Sync",
+  "name": "Budget Variance With Percentage Report",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": null,
+  "ref_doctype": "Cost Center",
+  "reference_report": null,
+  "report_name": "Budget Variance With Percentage Report",
+  "report_script": null,
+  "report_type": "Script Report",
+  "roles": [
+   {
+    "parent": "Budget Variance With Percentage Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Budget Variance With Percentage Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Budget Variance With Percentage Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Auditor"
+   },
+   {
+    "parent": "Budget Variance With Percentage Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Budget Variance With Percentage Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Purchase User"
+   },
+   {
+    "parent": "Budget Variance With Percentage Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Budget Variance With Percentage Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Special Site Users"
+   },
+   {
+    "parent": "Budget Variance With Percentage Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Payroll Admin"
+   },
+   {
+    "parent": "Budget Variance With Percentage Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Restaurant Manager"
+   },
+   {
+    "parent": "Budget Variance With Percentage Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ]
  }
 ]
