@@ -42,13 +42,13 @@ def get_data():
                     "type": "doctype",
                     "name": "Tail Settings",
                 },
+                
                 {
-                    "type": "doctype",
-                    "name": "Wallet",
-                },
-                {
-                    "type": "doctype",
-                    "name": "Wallet Logs",
+                    "type": "report",
+                    "is_query_report": True,
+                    "name":"Custom Leave Ledger Entry",
+                    "doctype":"Leave Ledger Entry"
                 }
-			]
-		}]
+	        ]
+		}
+                ] 
