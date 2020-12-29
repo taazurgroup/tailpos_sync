@@ -102,12 +102,12 @@
   "docstatus": 0,
   "doctype": "Custom Script",
   "dt": "Additional Salary",
-  "modified": "2020-11-21 15:10:08.757000",
+  "modified": "2020-12-23 22:56:16.525789",
   "name": "Additional Salary-Client",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "script": "//-------------------------------------------------------------\nfrappe.ui.form.on('Additional Salary', {\n\tsetup(frm) {\n\t\t// your code here\n\t\tcur_frm.set_query(\"ind_ssa\", function(doc) {\n\t\t    return {\n\t\t        filters: {\n\t\t            \"employee\": cur_frm.doc.employee\n//\t\t            \"from_date\": 01-04-2020\n\t\t        }\n\t\t    };\n\t\t}\n\t\t);\n\t\t\n\t},\n\temployee(frm){\n\t\t    //this will fetch and set the most recent assignment.\n        frappe.db.get_link_options('Salary Structure Assignment', '',\n            {\n\t\t\t\temployee: cur_frm.doc.employee\n\t\t\t}\n\t\t).then(all_ssa =>{\n\t\t    frm.set_value(\"ind_ssa\", all_ssa[0].value);\n\t\t});\n\t}\t\n\t\n});\n"
+  "script": "//-------------------------------------------------------------\nfrappe.ui.form.on('Additional Salary', {\n\tsetup(frm) {\n\t\t// your code here\n\t\tcur_frm.set_query(\"ind_ssa\", function(doc) {\n\t\t    return {\n\t\t        filters: {\n\t\t            \"employee\": cur_frm.doc.employee\n//\t\t            \"from_date\": 01-04-2020\n\t\t        }\n\t\t    };\n\t\t}\n\t\t);\n//-------------------------------------------------------------------------\n//\t\tif(frm.doc.ind_salary_component_type==\"Earning\"){    \n//\t\t    cur_frm.fields_dict['salary_component'].get_query = function(doc) {\n//\t\t        return {\n//\t\t            filters: {\n//\t\t                \"type\":\"Earning\"\n//\t\t            }\n//\t\t        };\n//            \n//\t\t    };\n//\n//\t\t}\n//\t\tif(frm.doc.ind_salary_component_type==\"Deduction\"){    \n//\t\t    cur_frm.fields_dict['salary_component'].get_query = function(doc) {\n//\t\t        return {\n//\t\t            filters: {\n//\t\t                \"type\":\"Deduction\"\n//\t\t            }\n//\t\t        };\n//            \n//\t\t    };\t\t    \n//\t\t    \n//\t\t}\n\n//-------------------------------------------------------------------------\n\n\t},\n\temployee(frm){\n\t\t    //this will fetch and set the most recent assignment.\n        frappe.db.get_link_options('Salary Structure Assignment', '',\n            {\n\t\t\t\temployee: cur_frm.doc.employee\n\t\t\t}\n\t\t).then(all_ssa =>{\n\t\t    frm.set_value(\"ind_ssa\", all_ssa[0].value);\n\t\t});\n\t}\t\n\t\n});\n"
  },
  {
   "docstatus": 0,

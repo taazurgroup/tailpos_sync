@@ -6704,7 +6704,7 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2017-02-24 20:18:04.317397",
+  "modified": "2020-12-28 18:59:31.262386",
   "module": "HR",
   "name": "Employee Leave Balance",
   "parent": null,
@@ -9320,6 +9320,62 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "Accounts User"
+   }
+  ]
+ },
+ {
+  "add_total_row": 1,
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Contracting Logo only",
+  "modified": "2020-12-28 17:53:53.468133",
+  "module": "HR",
+  "name": "Custom Leave Ledger Entry",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": "SELECT DISTINCT\nA.name as \"ID:Link/Leave Ledger Entry:100\",\nA.employee as \"Employee:Link/Employee:100\",\nA.employee_name as \"Employee Name:Data:130\",\nA.leave_type as \"Leave Type:Data:120\",\nA.transaction_type as \"Transaction Type:Data:120\",\nA.transaction_name as \"Leave Allocation:Link/Leave Allocation:120\",\nA.from_date as \"From Date:Date:80\",\nA.to_date as \"To Date:Date:80\",\nA.leaves as \"leaves:Float:80\",\nA.leaves as \"Actual Balance:Float:120\",\nA.is_carry_forward as \"Is Carry Forward:Data:100\",\nA.is_expired as \"Is Expired:Data:100\",\nA.is_lwp as \"Is Leave Without Pay:Select:140\"\n\n\nFROM\n`tabLeave Ledger Entry` as A\n\nWHERE\nA.employee=\"TAZ-00277\"\n&& A.docstatus=1\n/* && A.leave_type=\"Annual Leave (30)\" */\n\n\nORDER BY A.from_date DESC",
+  "ref_doctype": "Leave Ledger Entry",
+  "reference_report": null,
+  "report_name": "Custom Leave Ledger Entry",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Custom Leave Ledger Entry",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "All"
+   },
+   {
+    "parent": "Custom Leave Ledger Entry",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Custom Leave Ledger Entry",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Custom Leave Ledger Entry",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Custom Leave Ledger Entry",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Leave Allocation Create"
    }
   ]
  }

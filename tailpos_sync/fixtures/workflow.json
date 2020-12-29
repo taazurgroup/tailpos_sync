@@ -1687,5 +1687,203 @@
   ],
   "workflow_name": "Goods Delivery",
   "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Expense Claim",
+  "is_active": 0,
+  "modified": "2020-12-29 10:49:55.500876",
+  "name": "Expense Claim = LM-FM-MM",
+  "override_status": 1,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "All",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Initial Review",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Script Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Waiting for LM",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Script Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Rejected By LM",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Script Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Waiting for FM",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Script Manager",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Rejected By FM",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Script Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Waiting for MM",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Script Manager",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Approved",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Submit for Approval",
+    "allow_self_approval": 1,
+    "allowed": "All",
+    "condition": null,
+    "next_state": "Waiting for LM",
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Initial Review"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Expense Approver",
+    "condition": null,
+    "next_state": "Waiting for FM",
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Waiting for LM"
+   },
+   {
+    "action": "Review",
+    "allow_self_approval": 1,
+    "allowed": "Expense Approver",
+    "condition": null,
+    "next_state": "Initial Review",
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Waiting for LM"
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "Expense Approver",
+    "condition": null,
+    "next_state": "Rejected By LM",
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Waiting for LM"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Accounts Manager",
+    "condition": null,
+    "next_state": "Waiting for MM",
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Waiting for FM"
+   },
+   {
+    "action": "Review",
+    "allow_self_approval": 1,
+    "allowed": "Accounts Manager",
+    "condition": null,
+    "next_state": "Initial Review",
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Waiting for FM"
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "Accounts Manager",
+    "condition": null,
+    "next_state": "Rejected By FM",
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Waiting for FM"
+   },
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Maintenance Manager",
+    "condition": null,
+    "next_state": "Approved",
+    "parent": "Expense Claim = LM-FM-MM",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Waiting for MM"
+   }
+  ],
+  "workflow_name": "Expense Claim = LM-FM-MM",
+  "workflow_state_field": "workflow_state"
  }
 ]
