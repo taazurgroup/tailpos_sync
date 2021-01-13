@@ -909,7 +909,7 @@
    "_liked_by": null,
    "_user_tags": null,
    "amend": 1,
-   "cancel": 1,
+   "cancel": 0,
    "create": 1,
    "creation": "2018-04-13 16:38:41.769237",
    "delete": 1,
@@ -944,9 +944,9 @@
    "_user_tags": null,
    "amend": 0,
    "cancel": 0,
-   "create": 1,
+   "create": 0,
    "creation": "2018-04-13 16:38:41.769237",
-   "delete": 1,
+   "delete": 0,
    "docstatus": 0,
    "email": 1,
    "export": 1,
@@ -969,7 +969,7 @@
    "share": 1,
    "submit": 0,
    "user_permission_doctypes": null,
-   "write": 1
+   "write": 0
   },
   {
    "_assign": null,
@@ -978,7 +978,7 @@
    "_user_tags": null,
    "amend": 0,
    "cancel": 0,
-   "create": 1,
+   "create": 0,
    "creation": "2018-04-13 16:38:41.769237",
    "delete": 0,
    "docstatus": 0,
@@ -1001,9 +1001,9 @@
    "role": "HR User",
    "set_user_permissions": 0,
    "share": 1,
-   "submit": 1,
+   "submit": 0,
    "user_permission_doctypes": null,
-   "write": 1
+   "write": 0
   },
   {
    "_assign": null,
@@ -1011,10 +1011,10 @@
    "_liked_by": null,
    "_user_tags": null,
    "amend": 1,
-   "cancel": 1,
-   "create": 1,
+   "cancel": 0,
+   "create": 0,
    "creation": "2019-03-23 07:27:07.326204",
-   "delete": 1,
+   "delete": 0,
    "docstatus": 0,
    "email": 1,
    "export": 1,
@@ -1035,9 +1035,9 @@
    "role": "Payroll Admin",
    "set_user_permissions": 0,
    "share": 0,
-   "submit": 1,
+   "submit": 0,
    "user_permission_doctypes": null,
-   "write": 1
+   "write": 0
   },
   {
    "_assign": null,
