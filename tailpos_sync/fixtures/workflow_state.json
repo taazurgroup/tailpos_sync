@@ -267,6 +267,18 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2021-01-05 22:18:12.339967",
+  "name": "Approved By All",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "style": "Success",
+  "workflow_state_name": "Approved By All"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2019-03-16 07:01:37.756954",
   "name": "Waiting For Approval",
   "parent": null,
