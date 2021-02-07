@@ -967,9 +967,9 @@
    "role": "System Manager",
    "set_user_permissions": 0,
    "share": 1,
-   "submit": 0,
+   "submit": 1,
    "user_permission_doctypes": null,
-   "write": 0
+   "write": 1
   },
   {
    "_assign": null,
@@ -1110,6 +1110,29 @@
  ],
  "doctype": "Salary Structure Assignment",
  "property_setters": [
+  {
+   "_assign": null,
+   "_comments": null,
+   "_liked_by": null,
+   "_user_tags": null,
+   "creation": "2021-01-18 15:12:35.852193",
+   "default_value": null,
+   "doc_type": "Salary Structure Assignment",
+   "docstatus": 0,
+   "doctype_or_field": "DocField",
+   "field_name": "base",
+   "idx": 0,
+   "modified": "2021-01-18 15:12:35.852193",
+   "modified_by": "santosh@taazur.com",
+   "name": "Salary Structure Assignment-base-label",
+   "owner": "santosh@taazur.com",
+   "parent": null,
+   "parentfield": null,
+   "parenttype": null,
+   "property": "label",
+   "property_type": "Data",
+   "value": "Basic"
+  },
   {
    "_assign": null,
    "_comments": null,
