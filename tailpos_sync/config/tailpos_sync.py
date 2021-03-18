@@ -60,7 +60,15 @@ def get_data():
                     "is_query_report": True,
                     "name":"Budget Variance With Percentage Report",
                     "doctype":"Cost Center"
+                },
+
+                {
+                    "type": "report",
+                    "is_query_report": True,
+                    "name":"Non-Saudi Vacation Report",
+                    "doctype":"Leave Application"
                 }
+
                 ]
 		}
                 ] 

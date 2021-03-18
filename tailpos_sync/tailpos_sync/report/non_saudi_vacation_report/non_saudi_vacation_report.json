@@ -8,7 +8,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": "Contracting Logo only",
- "modified": "2021-03-18 12:17:44.639092",
+ "modified": "2021-03-18 12:40:08.475971",
  "modified_by": "Administrator",
  "module": "TailPOS Sync",
  "name": "Non-Saudi Vacation Report",
@@ -32,13 +32,10 @@
    "role": "Leave Approver"
   },
   {
-   "role": "Special Site Users"
-  },
-  {
    "role": "Payroll Admin"
   },
   {
-   "role": "HR Read Only"
+   "role": "Leave Management"
   }
  ]
 }
