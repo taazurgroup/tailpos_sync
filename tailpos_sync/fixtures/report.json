@@ -2019,7 +2019,7 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2019-01-17 17:20:42.374958",
+  "modified": "2021-03-02 10:56:34.908083",
   "module": "Accounts",
   "name": "Trial Balance (Simple)",
   "parent": null,
@@ -2037,19 +2037,7 @@
     "parent": "Trial Balance (Simple)",
     "parentfield": "roles",
     "parenttype": "Report",
-    "role": "Accounts User"
-   },
-   {
-    "parent": "Trial Balance (Simple)",
-    "parentfield": "roles",
-    "parenttype": "Report",
     "role": "Accounts Manager"
-   },
-   {
-    "parent": "Trial Balance (Simple)",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Auditor"
    }
   ]
  },
@@ -5327,14 +5315,14 @@
   "javascript": null,
   "json": null,
   "letter_head": "Contracting Logo only",
-  "modified": "2020-11-02 14:38:35.122124",
+  "modified": "2021-01-18 15:21:22.710816",
   "module": "HR",
   "name": "Employee Salary Details",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
   "prepared_report": 0,
-  "query": "SELECT\n\nA.employee as \"Employee:Data:100\",\nA.taa_branch as \"Branch:Data:120\",\nA.employee_name as \"Employee Name:Data:180\",\nA.base as \"Basic:Float:100\",\nA.ind_food_allowance as \"Food Allowance:Float:130\",\nA.ind_hra as \"HRA:Float:100\",\nA.ind_transport_allowance as \"Transport Allowance:Float:150\",\nA.ind_mobile_allowance as \"Mobile Allowance:Float:130\",\nA.ind_other_allowance as \"Other Allowance:Float:130\",\nA.ind_gross_salary as \"Gross Salary:Float:120\",\nA.from_date as \"From Date:Date:100\",\nA.name as \"ID:Link/Salary Structure Assignment:150\",\nB.status as \"Status:Data:100\"\n\nFROM\n`tabSalary Structure Assignment` AS A,\n`tabEmployee` AS B\n\nWHERE\nA.docstatus=1\n&& A.employee=B.name\n&&B.status=\"Active\"\n\nORDER BY A.employee,A.from_date DESC",
+  "query": "SELECT\n\nA.employee as \"Employee:Data:100\",\nA.from_date as \"From Date:Date:100\",\nA.taa_branch as \"Branch:Data:120\",\nA.employee_name as \"Employee Name:Data:180\",\nA.base as \"Basic:Float:100\",\nA.ind_food_allowance as \"Food Allowance:Float:130\",\nA.ind_hra as \"HRA:Float:100\",\nA.ind_transport_allowance as \"Transport Allowance:Float:150\",\nA.ind_mobile_allowance as \"Mobile Allowance:Float:130\",\nA.ind_other_allowance as \"Other Allowance:Float:130\",\nA.ind_gross_salary as \"Gross Salary:Float:120\",\n\nA.name as \"ID:Link/Salary Structure Assignment:150\",\nB.status as \"Status:Data:100\"\n\nFROM\n`tabSalary Structure Assignment` AS A,\n`tabEmployee` AS B\n\nWHERE\nA.docstatus=1\n&& A.employee=B.name\n&&B.status=\"Active\"\n\nORDER BY A.employee,A.from_date DESC",
   "ref_doctype": "Salary Structure Assignment",
   "reference_report": null,
   "report_name": "Employee Salary Details",
@@ -5521,7 +5509,7 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2018-09-07 12:18:21.850851",
+  "modified": "2021-03-02 10:54:31.861525",
   "module": "Accounts",
   "name": "Balance Sheet",
   "parent": null,
@@ -5539,19 +5527,7 @@
     "parent": "Balance Sheet",
     "parentfield": "roles",
     "parenttype": "Report",
-    "role": "Accounts User"
-   },
-   {
-    "parent": "Balance Sheet",
-    "parentfield": "roles",
-    "parenttype": "Report",
     "role": "Accounts Manager"
-   },
-   {
-    "parent": "Balance Sheet",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Auditor"
    }
   ]
  },
@@ -5565,7 +5541,7 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2017-02-24 20:12:40.282376",
+  "modified": "2021-03-02 10:52:59.247439",
   "module": "Accounts",
   "name": "Profit and Loss Statement",
   "parent": null,
@@ -5583,19 +5559,7 @@
     "parent": "Profit and Loss Statement",
     "parentfield": "roles",
     "parenttype": "Report",
-    "role": "Accounts User"
-   },
-   {
-    "parent": "Profit and Loss Statement",
-    "parentfield": "roles",
-    "parenttype": "Report",
     "role": "Accounts Manager"
-   },
-   {
-    "parent": "Profit and Loss Statement",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Auditor"
    }
   ]
  },
@@ -5609,7 +5573,7 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2017-02-24 20:12:33.520866",
+  "modified": "2021-03-02 10:55:40.076683",
   "module": "Accounts",
   "name": "Trial Balance",
   "parent": null,
@@ -5627,19 +5591,7 @@
     "parent": "Trial Balance",
     "parentfield": "roles",
     "parenttype": "Report",
-    "role": "Accounts User"
-   },
-   {
-    "parent": "Trial Balance",
-    "parentfield": "roles",
-    "parenttype": "Report",
     "role": "Accounts Manager"
-   },
-   {
-    "parent": "Trial Balance",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Auditor"
    }
   ]
  },
@@ -5917,14 +5869,14 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2017-02-24 20:09:30.979664",
+  "modified": "2021-03-02 10:56:06.805307",
   "module": "Accounts",
   "name": "Trial Balance for Party",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
   "prepared_report": 0,
-  "query": null,
+  "query": "",
   "ref_doctype": "GL Entry",
   "reference_report": null,
   "report_name": "Trial Balance for Party",
@@ -5935,19 +5887,7 @@
     "parent": "Trial Balance for Party",
     "parentfield": "roles",
     "parenttype": "Report",
-    "role": "Accounts User"
-   },
-   {
-    "parent": "Trial Balance for Party",
-    "parentfield": "roles",
-    "parenttype": "Report",
     "role": "Accounts Manager"
-   },
-   {
-    "parent": "Trial Balance for Party",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Auditor"
    }
   ]
  },
@@ -6339,7 +6279,7 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2017-02-24 20:03:58.156580",
+  "modified": "2021-03-02 10:58:35.707669",
   "module": "Accounts",
   "name": "Profitability Analysis",
   "parent": null,
@@ -6357,19 +6297,7 @@
     "parent": "Profitability Analysis",
     "parentfield": "roles",
     "parenttype": "Report",
-    "role": "Accounts User"
-   },
-   {
-    "parent": "Profitability Analysis",
-    "parentfield": "roles",
-    "parenttype": "Report",
     "role": "Accounts Manager"
-   },
-   {
-    "parent": "Profitability Analysis",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Auditor"
    }
   ]
  },
@@ -6704,13 +6632,13 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2020-12-28 18:59:31.262386",
+  "modified": "2021-02-14 12:10:11.754702",
   "module": "HR",
   "name": "Employee Leave Balance",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "prepared_report": 0,
+  "prepared_report": 1,
   "query": null,
   "ref_doctype": "Employee",
   "reference_report": null,
@@ -6824,14 +6752,14 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
-  "modified": "2017-02-24 20:12:22.464240",
+  "modified": "2021-03-02 10:57:37.430063",
   "module": "Accounts",
   "name": "Gross Profit",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
   "prepared_report": 0,
-  "query": null,
+  "query": "",
   "ref_doctype": "Sales Invoice",
   "reference_report": null,
   "report_name": "Gross Profit",
@@ -6843,12 +6771,6 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "Accounts Manager"
-   },
-   {
-    "parent": "Gross Profit",
-    "parentfield": "roles",
-    "parenttype": "Report",
-    "role": "Accounts User"
    }
   ]
  },
@@ -9333,14 +9255,14 @@
   "javascript": null,
   "json": null,
   "letter_head": "Contracting Logo only",
-  "modified": "2020-12-28 17:53:53.468133",
+  "modified": "2021-02-10 12:44:27.725623",
   "module": "HR",
   "name": "Custom Leave Ledger Entry",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
   "prepared_report": 0,
-  "query": "SELECT DISTINCT\nA.name as \"ID:Link/Leave Ledger Entry:100\",\nA.employee as \"Employee:Link/Employee:100\",\nA.employee_name as \"Employee Name:Data:130\",\nA.leave_type as \"Leave Type:Data:120\",\nA.transaction_type as \"Transaction Type:Data:120\",\nA.transaction_name as \"Leave Allocation:Link/Leave Allocation:120\",\nA.from_date as \"From Date:Date:80\",\nA.to_date as \"To Date:Date:80\",\nA.leaves as \"leaves:Float:80\",\nA.leaves as \"Actual Balance:Float:120\",\nA.is_carry_forward as \"Is Carry Forward:Data:100\",\nA.is_expired as \"Is Expired:Data:100\",\nA.is_lwp as \"Is Leave Without Pay:Select:140\"\n\n\nFROM\n`tabLeave Ledger Entry` as A\n\nWHERE\nA.employee=\"TAZ-00277\"\n&& A.docstatus=1\n/* && A.leave_type=\"Annual Leave (30)\" */\n\n\nORDER BY A.from_date DESC",
+  "query": "SELECT DISTINCT\nA.name as \"ID:Link/Leave Ledger Entry:100\",\nA.employee as \"Employee:Link/Employee:100\",\nA.employee_name as \"Employee Name:Data:130\",\nA.leave_type as \"Leave Type:Data:120\",\nA.transaction_type as \"Transaction Type:Data:120\",\nA.transaction_name as \"Leave Allocation:Link/Leave Allocation:120\",\nA.from_date as \"From Date:Date:80\",\nA.to_date as \"To Date:Date:80\",\nA.leaves as \"leaves:Float:80\",\nA.leaves as \"Actual Balance:Float:120\",\nA.is_carry_forward as \"Is Carry Forward:Data:100\",\nA.is_expired as \"Is Expired:Data:100\",\nA.is_lwp as \"Is Leave Without Pay:Select:140\"\n\n\nFROM\n`tabLeave Ledger Entry` as A\n\nWHERE\n\nA.docstatus=1\n/* && A.employee=\"TAZ-00277\" */\n&& A.leave_type=\"Annual Leave (30)\" OR A.leave_type=\"Casual Leave\"\n\n\nORDER BY A.from_date DESC",
   "ref_doctype": "Leave Ledger Entry",
   "reference_report": null,
   "report_name": "Custom Leave Ledger Entry",
@@ -9506,6 +9428,74 @@
     "parentfield": "roles",
     "parenttype": "Report",
     "role": "System Manager"
+   }
+  ]
+ },
+ {
+  "add_total_row": 0,
+  "disable_prepared_report": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "Contracting Logo only",
+  "modified": "2021-03-18 09:35:24.824814",
+  "module": "HR",
+  "name": "Non-Saudi Vacation Report",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "prepared_report": 0,
+  "query": "Select\n\nA.name as \"ID:Link/Leave Application:120\",\nA.employee as \"Employee:Data:100\",\nA.employee_name \"Employee Name:Data:140\",\nA.leave_type \"Leave Type:Data:100\"\n\nFROM\n\n`tabLeave Application` as A",
+  "ref_doctype": "Leave Application",
+  "reference_report": null,
+  "report_name": "Non-Saudi Vacation Report",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Non-Saudi Vacation Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Non-Saudi Vacation Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Employee"
+   },
+   {
+    "parent": "Non-Saudi Vacation Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "Non-Saudi Vacation Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "Non-Saudi Vacation Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Special Site Users"
+   },
+   {
+    "parent": "Non-Saudi Vacation Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Payroll Admin"
+   },
+   {
+    "parent": "Non-Saudi Vacation Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Read Only"
    }
   ]
  }

@@ -195,18 +195,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2020-12-29 10:05:27.920426",
-  "name": "Initial Review",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "style": "Warning",
-  "workflow_state_name": "Initial Review"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2020-12-29 10:06:28.132503",
   "name": "Waiting for LM",
   "parent": null,
@@ -279,6 +267,30 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2021-02-22 16:10:13.058770",
+  "name": "Waiting for HRM",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "style": "Warning",
+  "workflow_state_name": "Waiting for HRM"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2021-02-22 21:32:22.801068",
+  "name": "Rejected by HRM",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "style": "Danger",
+  "workflow_state_name": "Rejected by HRM"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2019-03-16 07:01:37.756954",
   "name": "Waiting For Approval",
   "parent": null,
@@ -286,5 +298,17 @@
   "parenttype": null,
   "style": "Warning",
   "workflow_state_name": "Waiting For Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2020-12-29 10:05:27.920426",
+  "name": "Initial Review",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "style": "Warning",
+  "workflow_state_name": "Initial Review"
  }
 ]

@@ -79,17 +79,6 @@
  {
   "docstatus": 0,
   "doctype": "Custom Script",
-  "dt": "Item Price",
-  "modified": "2020-07-05 16:21:38.267004",
-  "name": "Item Price-Client",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "script": "frappe.ui.form.on('Item Price', {\n\trefresh(frm) {\n\t\t// your code here\n\t\tfrm.doc.price_list_rate=frm.doc.taa_sales_price-frm.doc.taa_sales_price*15/100;\n\t}\n});"
- },
- {
-  "docstatus": 0,
-  "doctype": "Custom Script",
   "dt": "Goods Delivery",
   "modified": "2020-08-21 15:14:18.301299",
   "name": "Goods Delivery-Client",
